@@ -149,12 +149,12 @@
   @media screen and (min-width: $desktop) {
     background: linear-gradient(
       180deg,
-      var(--howitsmade-bg-color) 35%,
+      var(--howitsmade-bg-color) 33%,
       var(--primary-white-color) 2%
     );
   }
 }
-np .gallery__img {
+.gallery__img {
   margin-left: auto;
   margin-right: auto;
 }
