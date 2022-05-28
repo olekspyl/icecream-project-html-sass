@@ -1,9 +1,29 @@
 <section class="hero">
-    <div class="container">
-        <span class="hero__back"></span>  
-        <h1 class="hero__title">ice cream made with <span class="hero__title--accent">passion</span></h1>
-        <ul class="hero__button">
-            <li><a class="hero__link" href="">Products</a></li>
-            <li><a class="hero__link hero__link--invers" href="">How it’s made?</a></li>
-        </ul>  
+  <div class="container">
+    <span class="hero__back"></span>
+    <h1 class="hero__title">
+      ice cream made with <span class="hero__title--accent">passion</span>
+    </h1>
+    <ul class="hero__button">
+      <li><a class="hero__link" href="">Products</a></li>
+      <li>
+        <a class="hero__link hero__link--invers" href="">How it’s made?</a>
+      </li>
+    </ul>
+    <ul class="hero__picture">
+      <li class="hero__item">
+        <picture>
+          <source
+            media="(max-width: 480px)"
+            srcset="
+              images/mobile/mob-icecream-1x.png 1x,
+              images/mobile/mob-icecream-2x.png 2x
+            "
+            alt="images"
+          />
+          <img src="images/mobile/mob-icecream-1x.png" alt="аватарка" />
+        </picture>
+      </li>
+    </ul>
+  </div>
 </section>
