@@ -1,7 +1,7 @@
 .contacts {
     background-image: linear-gradient(
-        #ffffff 22%,
-        #FFF5F6 22%
+        var(--primary-white-color) 22%,
+        var(--howitsmade-bg-color) 22%
     );
 }
 .contacts__container {
@@ -54,13 +54,13 @@
     margin: 0;
     padding-bottom: 24px;
     color: var(--text-gray-color);
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid var(--review-element-color);
 }
 .card__list {
     padding-top: 24px;
     padding-bottom: 24px;
     margin-bottom: 24px;
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid var(--review-element-color);
 }
 .card__item + .card__item {
     margin-top: 8px;
@@ -92,13 +92,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
-    background: #D41342;
+    color: var(--primary-white-color);
+    background: var(--dark-pink-color);
     border-radius: 22px;
 }
 .contacts__button--second {
-    color: #D41342;
-    background-color: #FFFFFF;
+    color: var(--dark-pink-color);
+    background-color: var(--primary-white-color);
 }
 .contacts__secondlist {
     margin-top: 32px;
@@ -107,6 +107,6 @@
     margin-top: 10px;
 }
 .button-icon {
-    margin-top: 2px;
+    margin-top: 5px;
     margin-left: 8px;
 }
