@@ -26,14 +26,6 @@
   }
 }
 
-.hero__ice-cream {
-  @media screen and (max-width: $mobile) {
-    position: absolute;
-    left: 117px;
-    bottom: 0;
-  }
-}
-
 .hero__button {
   display: flex;
   z-index: 1;
@@ -83,4 +75,17 @@
   color: var(--dark-pink-color);
   background-color: var(--primary-white-color);
   margin-right: 0px;
+}
+
+.hero__picture {
+  @media screen and (max-width: $mobile) {
+  }
+}
+
+.hero__item {
+  @media screen and (max-width: $mobile) {
+    position: absolute;
+    left: 117px;
+    bottom: 0;
+  }
 }
