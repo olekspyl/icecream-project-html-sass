@@ -139,12 +139,12 @@
     transition: opacity 500ms;
 }
 
-// .is-hidden {
-//     opacity: 0;
-//     visibility: hidden;
-//     pointer-events: none;
-//     transition: opacity 300ms, visibility 300ms;
-// }
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 300ms, visibility 300ms;
+}
 
 .form {
     display: flex;
