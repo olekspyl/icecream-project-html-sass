@@ -136,14 +136,25 @@
   padding-bottom: 80px;
   background: linear-gradient(
     180deg,
-    var(--howitsmade-bg-color) 55%,
-    var(--primary-white-color) 45%
+    var(--howitsmade-bg-color) 24%,
+    var(--primary-white-color) 2%
   );
-  @media screen and (min-width: 320px) and (max-width: 479.98px) {
+  @media screen and (min-width: 768px) {
     background: linear-gradient(
       180deg,
-      var(--howitsmade-bg-color) 65%,
-      var(--primary-white-color) 35%
+      var(--howitsmade-bg-color) 30%,
+      var(--primary-white-color) 2%
     );
   }
+  @media screen and (min-width: $desktop) {
+    background: linear-gradient(
+      180deg,
+      var(--howitsmade-bg-color) 35%,
+      var(--primary-white-color) 2%
+    );
+  }
+}
+np .gallery__img {
+  margin-left: auto;
+  margin-right: auto;
 }
