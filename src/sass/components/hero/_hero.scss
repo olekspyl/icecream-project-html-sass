@@ -1,28 +1,29 @@
 .hero {
-  padding-top: 136px;
-  padding-bottom: 158px;
+  // padding-top: 136px;
+  // padding-bottom: 158px;
 
   background-color: var(--product-pink-color);
 
-  // &__back {
-  //   display: block;
-  //   //
+  @media screen and (max-width: $mobile) {
+    padding-top: 136px;
+    padding-bottom: 158px;
+    position: relative;
+    overflow: hidden;
+  }
 
-  //   width: 345px;
-  //   height: 345px;
-  //   top: 83px;
-  //   left: 20px;
+  &__back {
+    display: block;
 
-  //   background: var(--light-pink-color);
-  //   border-radius: 50%;
-  //   position: absolute;
-  //   transform: translateY(-50%);
-  // }
-}
-
-.hero > .container {
-  background: var(--product-pink-color);
-  margin-left: 20px;
+    background: var(--light-pink-color);
+    border-radius: 50%;
+    position: absolute;
+    @media screen and (max-width: $mobile) {
+      width: 345px;
+      height: 345px;
+      left: 36px;
+      bottom: 75px;
+    }
+  }
 }
 
 .hero__button {
@@ -32,8 +33,6 @@
 }
 
 .hero__title {
-  max-width: 218px;
-
   position: relative;
   z-index: 1;
   font-family: 'Titan One';
@@ -45,6 +44,9 @@
   margin-bottom: 20px;
 
   color: var(--primary-white-color);
+  @media screen and (max-width: $mobile) {
+    max-width: 218px;
+  }
 }
 
 .hero__title--accent {
@@ -73,4 +75,17 @@
   color: var(--dark-pink-color);
   background-color: var(--primary-white-color);
   margin-right: 0px;
+}
+
+.hero__picture {
+  @media screen and (max-width: $mobile) {
+  }
+}
+
+.hero__item {
+  @media screen and (max-width: $mobile) {
+    position: absolute;
+    left: 117px;
+    bottom: 0;
+  }
 }
