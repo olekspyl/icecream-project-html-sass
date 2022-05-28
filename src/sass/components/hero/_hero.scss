@@ -4,20 +4,20 @@
 
   background-color: var(--product-pink-color);
 
-  // &__back {
-  //   display: block;
-  //   //
+  &__back {
+    display: block;
+    //
 
-  //   width: 345px;
-  //   height: 345px;
-  //   top: 83px;
-  //   left: 20px;
+    width: 345px;
+    height: 345px;
+    top: 83px;
+    left: 20px;
 
-  //   background: var(--light-pink-color);
-  //   border-radius: 50%;
-  //   position: absolute;
-  //   transform: translateY(-50%);
-  // }
+    background: var(--light-pink-color);
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+  }
 }
 
 .hero > .container {
