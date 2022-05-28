@@ -1,4 +1,11 @@
+.contacts {
+    background-image: linear-gradient(
+        #ffffff 22%,
+        #FFF5F6 22%
+    );
+}
 .contacts__container {
+    padding-bottom: 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
