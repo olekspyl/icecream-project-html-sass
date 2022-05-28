@@ -1,0 +1,214 @@
+
+p {
+    margin: 0
+}
+.about {
+    
+    background: var(--howitsmade-bg-color);
+}
+
+.about-text {
+    
+    @extend %secondary-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.16;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 40px;
+        margin-bottom: 15px;
+
+    color: var(--light-pink-color);
+
+        @media screen and (min-width: $tablet) {
+            margin-top: 20px;
+                margin-bottom: 16px;
+            font-size: 26px;
+                line-height: 1.15;
+        }
+                 @media screen and (min-width: $desktop) {
+                    margin-top: 60px;
+                        margin-bottom: 16px;
+                    font-size: 30px;
+                        line-height: 1.13;
+                 }
+
+}
+
+.about{
+    @media screen and (max-width:767px){
+    background-image: url(..//images/mobile/mob-bcg-milk-1x.png);
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    background-size: auto;
+    background-position: bottom 26% left;
+    @media screen and (min-width: 480px) and (max-width: 767px){
+        background-position: bottom 26% center;
+    }
+}
+}
+
+    // @media screen and (max-width:767px) {
+    //     @media screen and (min-device-pixel-ratio: 2),
+    //         (min-resolution:192dpi),
+    //         (min-resolution:2dppx) {
+    //             .about {
+    //                 background-image:
+    //                     url(..//images/mobile/mob-bcg-milk-2x.png);
+    //             }
+        
+    //         }
+    // }
+
+
+.about-name {
+         @extend %secondary-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 1.14;
+    text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    color: var(--dark-pink-color);
+    margin: 0;
+        margin-bottom: 32px;
+
+    @media screen and (min-width: $tablet) {
+            font-size: 48px;
+                line-height: 1.14;
+                margin-bottom: 40px;
+        }
+    
+        @media screen and (min-width: $desktop) {
+        font-size: 58px;
+            line-height: 1.13;
+            margin-bottom: 79px;
+        }
+}
+
+
+.about-img{
+    width: 100%;
+}
+.about-list__item {
+   
+        margin-bottom: 40px;
+        @media screen and (max-width: $tablet) {
+            margin-top: 40px;
+        }
+}
+
+.about-list__item--another{
+   margin-bottom: 20px;
+@media screen and (min-width: $tablet) {
+    margin-bottom: 40px;
+    }
+
+}
+.about-picture {
+    @media screen and (min-width: 480px) and (max-width: 767px){
+    display: flex;
+    justify-content: center;}
+    
+}
+.about-pozition{
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+            display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+.about-picture__another{
+    width: 100%;
+    
+}
+.about-list__text {
+    width: 220px;
+       
+    
+    font-weight: 500;
+        font-size: 12px;
+        line-height: 1.58;
+    color: var(--primary-black-color);
+    @media screen and (min-width: 321px) and (max-width:768px) {
+        // width: 100%;
+        
+    }
+    @media screen and (min-width: $tablet) {
+        width: 334px;
+        font-size: 14px;
+            line-height: 1.78;
+            
+        }
+        @media screen and (min-width: $desktop) {
+            width: 334px;
+            margin-top: 72px;
+                margin-bottom: 32px;
+             font-size: 16px;
+            line-height: 1.75;
+            
+        }
+}
+.about-list__desc {
+    
+    width: 220px;
+            margin-top: 10px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.58;
+    color: var(--text-gray-color);
+    &:first-child{
+        margin-top:0;
+    }
+
+    
+
+
+
+    @media screen and (min-width: $tablet) {
+        width: 334px;
+        letter-spacing: 0.04em;
+        font-size: 14px;
+            line-height: 1.78;
+            
+        }
+    
+        @media screen and (min-width: $desktop) {
+            width: 334px;
+            letter-spacing: 0.04em;
+        font-size: 14px;
+            line-height: 1.92;
+        }
+                @media screen and (min-width: 321px) and (max-width:768px) {
+                    // width: 100%;
+        
+                }
+}
+
+
+// .about-list__desc--span{
+// line-height: 32px;
+// }
+.about-btn {
+    
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 40px;
+
+        color: #D41443;
+        width: 176px;
+        height: 44px;
+        background: var(--primary-white-color);
+        border-radius: 22px;
+        cursor: pointer;
+              
+}
+.about-svg {
+    margin-left: 13px;
+    --color1: var(--dark-pink-color);
+    
+}
+

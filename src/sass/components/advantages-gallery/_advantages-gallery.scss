@@ -1,0 +1,137 @@
+// advantages section styles
+
+.advantages {
+  padding-top: 0;
+  padding-bottom: 80px;
+  background-color: var(--howitsmade-bg-color);
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 131px;
+  }
+}
+.container--width {
+  @media screen and (min-width: $mobile) {
+    width: 320px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 1200px;
+  }
+}
+.advantages__list {
+  text-align: left;
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: -30px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: -60px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: -30px;
+  }
+}
+.advantages__item {
+  text-align: left;
+  @media screen and (max-width: 767.98px) {
+    max-width: 230px;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 3 - 60px);
+    margin-left: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% / 3 - 60px);
+    margin-left: 30px;
+  }
+}
+
+.advantages__item {
+  display: inline-block;
+  &:first-child::before {
+    content: url('../images/mobile/mob-udder-bucket-1x.png');
+  }
+  &:nth-child(2)::before {
+    content: url('../images/mobile/mob-apple-bucket-1x.png');
+  }
+  &:last-child::before {
+    content: url('../images/mobile/mob-heart-1x.png');
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    &:first-child::before {
+      content: '';
+      display: block;
+      width: 33px;
+      height: 50px;
+      background-size: contain;
+      background-image: url('../images/mobile/mob-udder-bucket-2x.png');
+    }
+    &:nth-child(2)::before {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 50px;
+      background-size: contain;
+      background-image: url('../images/mobile/mob-apple-bucket-2x.png');
+    }
+    &:last-child::before {
+      content: '';
+      display: block;
+      width: 44px;
+      height: 50px;
+      background-size: contain;
+      background-image: url('../images/mobile/mob-heart-2x.png');
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.advantages__number {
+  @extend %secondary-font;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--dark-pink-color);
+  margin-top: 16px;
+  margin-bottom: 16px;
+  transition: transform 250ms var(--timing-function);
+  &:hover {
+    transform: scale(1.1);
+  }
+  @media screen and (min-width: $tablet) {
+    font-size: 48px;
+    margin-top: 36px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 58px;
+    margin-top: 40px;
+  }
+}
+
+.advantages__text {
+  @include font-set(12px, 700, 1.7);
+  letter-spacing: 0.02em;
+  color: var(--primary-black-color);
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.74;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 1.76;
+  }
+}
+
+// gallery section styles
+.gallery-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
