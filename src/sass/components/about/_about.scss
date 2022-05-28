@@ -41,12 +41,13 @@ p {
     background-image: url(..//images/mobile/mob-bcg-milk-1x.png);
     background-repeat: no-repeat;
     background-attachment:scroll;
-    background-size: auto;
-    background-position: bottom 26% left;
+  
+    background-position: bottom 24% left;
     @media screen and (min-width: 480px) and (max-width: 767px){
-        background-position: bottom 26% center;
+        background-position: bottom 28% center;
     }
 }
+  @media screen and (max-width: 480px){  background-size: 100%;}
 }
 
     // @media screen and (max-width:767px) {
@@ -125,16 +126,16 @@ p {
     
 }
 .about-list__text {
-    width: 220px;
+    width: 100%;
        
     
     font-weight: 500;
         font-size: 12px;
         line-height: 1.58;
     color: var(--primary-black-color);
-    @media screen and (min-width: 321px) and (max-width:768px) {
-        // width: 100%;
-        
+    @media screen and (min-width: 480px) and (max-width:767px) {
+        width: 220px;
+    
     }
     @media screen and (min-width: $tablet) {
         width: 334px;
@@ -153,7 +154,7 @@ p {
 }
 .about-list__desc {
     
-    width: 220px;
+    width: 100%;
             margin-top: 10px;
         font-weight: 500;
         font-size: 12px;
@@ -164,11 +165,14 @@ p {
     }
 
     
+@media screen and (min-width: 480px) and (max-width:767px) {
+    width: 220px;
 
+}
 
 
     @media screen and (min-width: $tablet) {
-        width: 334px;
+        
         letter-spacing: 0.04em;
         font-size: 14px;
             line-height: 1.78;
@@ -181,10 +185,7 @@ p {
         font-size: 14px;
             line-height: 1.92;
         }
-                @media screen and (min-width: 321px) and (max-width:768px) {
-                    // width: 100%;
-        
-                }
+                
 }
 
 
