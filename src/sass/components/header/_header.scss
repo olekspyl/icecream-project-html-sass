@@ -4,15 +4,13 @@ header {
 
   @media screen and (min-width: $tablet) {
     padding-top: 32px;
-    padding-left: 16px;
-    padding-right: 16px;
   }
 }
 
 .page-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex(flex, center, space-between);
+  padding-right: 32px;
+  padding-left: 32px;
 }
 
 .tablet-menu {
@@ -37,6 +35,10 @@ header {
   transform: translateX(0);
   transition: opacity var(--duration) var(--timing-function),
     transform var(--duration) var(--timing-function);
+
+  @media screen and (min-width: $mobile) {
+    width: 250px;
+  }
 
   @media screen and (min-width: $tablet) {
     width: 254px;
