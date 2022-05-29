@@ -1,18 +1,31 @@
 header {
   background-color: var(--product-pink-color);
   padding-top: 8px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 32px;
+  }
 }
 
 .page-header {
-  display: flex;
-  justify-content: space-between;
+  @include flex(flex, center, space-between);
+  @media screen and (min-width: $tablet) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
 }
 
+.tablet-menu {
+  @media screen and (min-width: $tablet) {
+    @include flex(flex, center);
+    justify-content: baseline;
+  }
+}
 /*  ----- Mobile Menu ----- */
 
 .mobile-menu {
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
@@ -21,17 +34,30 @@ header {
   background-color: var(--mobile-menu-bg-color);
 
   opacity: 1;
-  // transform: translateX(-100%);
-  // transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
-  //   transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(0);
+  transition: opacity var(--duration) var(--timing-function),
+    transform var(--duration) var(--timing-function);
+
+  @media screen and (min-width: $mobile) {
+    width: 250px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 254px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .mobile-menu.is-hidden {
   opacity: 0;
   pointer-events: none;
-  // transform: translateX(0);
-  // transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
-  //   transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transform: translateX(-100%);
+  transition: opacity var(--duration) var(--timing-function),
+    transform var(--duration) var(--timing-function);
 }
 
 .mobile-menu-container {
@@ -44,15 +70,29 @@ header {
   margin-left: auto;
 }
 
-.button-buy {
+.button--buy {
   width: 209px;
-  margin: 0 20px 20px 20px;
+  margin: 0 auto 20px auto;
 
   transition: background-color var(--duration) var(--timing-function);
+  @media screen and (min-width: $tablet) {
+    width: 186px;
+  }
 }
 
-.button-buy:hover,
-.button-buy:focus {
+.button--tablet {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+    width: 160px;
+    margin-left: 32px;
+  }
+}
+
+.button--buy:hover,
+.button--buy:focus,
+.button--tablet:hover,
+.button--tablet:focus {
   background-color: var(--button-bg-hover-color);
 }
 
@@ -62,12 +102,15 @@ header {
 .button__text {
   margin-right: 15px;
 }
+.button__text--tablet {
+  margin-right: 8px;
+}
 
 .menu-open-btn,
 .menu-close-btn {
   display: block;
-  background-color: transparent;
   padding: 0;
+  background-color: transparent;
   color: currentColor;
 
   transition: color var(--duration) var(--timing-function);
@@ -104,9 +147,9 @@ header {
 }
 
 .menu-nav__item {
-  display: flex;
-  align-items: center;
+  @include flex(flex, center);
   justify-content: start;
+
   padding: 12px 20px 12px 20px;
   border: solid var(--mobile-menu-border-color);
   border-width: 1px 0 0 0;

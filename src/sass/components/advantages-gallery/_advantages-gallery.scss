@@ -60,7 +60,9 @@
     content: url('../images/mobile/mob-heart-1x.png');
   }
 
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     &:first-child::before {
       content: '';
       display: block;
@@ -130,8 +132,29 @@
 }
 
 // gallery section styles
-.gallery-container {
+.gallery {
+  padding-bottom: 40px;
+  background: linear-gradient(
+    180deg,
+    var(--howitsmade-bg-color) 24%,
+    var(--primary-white-color) 2%
+  );
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(
+      180deg,
+      var(--howitsmade-bg-color) 30%,
+      var(--primary-white-color) 2%
+    );
+  }
+  @media screen and (min-width: $desktop) {
+    background: linear-gradient(
+      180deg,
+      var(--howitsmade-bg-color) 33%,
+      var(--primary-white-color) 2%
+    );
+  }
+}
+.gallery__img {
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
 }
