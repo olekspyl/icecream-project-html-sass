@@ -6,6 +6,7 @@
 .footer {
     background-color: var(--howitsmade-bg-color);
     padding-bottom: 20px;
+    padding-top: 24px;
 
     @media screen and (min-width: $mobile) {
         width: $mobile;
@@ -13,6 +14,8 @@
 }
 
 .footer__title {
+    display: flex;
+    flex-direction: column;
     margin-top: 0px;
     margin-bottom: 16px;
     max-width: 232px;
@@ -24,10 +27,12 @@
 }
 
 .footer__subtitle {
+    padding-top: 16px;
     margin-top: 0px;
     margin-bottom: 40px;
     max-width: 200px;
 
+    color: var(--dark-pink-color);
     font-size: 34px;
     line-height: 1.14;
     letter-spacing: 0.04em;
@@ -83,6 +88,11 @@
     font-size: 12px;
     line-height: 1.86;
     color: var(--primary-black-color);
+
+    &:hover,
+    &:focus {
+        color: var(--dark-pink-color);
+    }
 }
 
 .footer__tel--number {
@@ -113,6 +123,14 @@
 
     margin-left: auto;
     margin-right: auto;
+}
+
+.section-footer {
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+        display: flex;
+        flex-direction: row;
+       }
 }
 
 
