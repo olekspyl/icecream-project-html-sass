@@ -58,11 +58,11 @@ p {
     background-attachment:scroll;
    
 }
-//  @media screen and (max-width:479px) {
-//      background-position: bottom 27% left;
-//  }
+ @media screen and (max-width:479px) {
+     background-position: 0% 72% ;
+ }
  @media screen and (min-width: 480px) and (max-width: 767px) {
-     background-position: bottom 28% center;
+     background-position: 50% 70%;
  }
 
 }
