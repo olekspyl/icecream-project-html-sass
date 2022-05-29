@@ -1,6 +1,8 @@
-.about__product {
-    padding-top: 80px;
+.products {
+padding-top: 0px;
     padding-bottom: 40px;
+}
+.about__product {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 148px;
@@ -30,11 +32,13 @@
 }
 
 .about__product-gallery {
-    margin-top: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
 }
 
-.about__product-item {
-    margin-bottom: 0;
+.about__product-item:not(:last-child) {
+    margin-bottom: 140px;
 }
 
 .about__product-list {
@@ -44,7 +48,32 @@
     padding-bottom: 40px;
 }
 
-.about__product-name {
+.about__product-name::before{
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(/src/images/mobile/mob-icestrawberry-1x.png);
+    width: 280px;
+    height: 280px;
+    top: -140px;
+    left: 0;
+}
+
+.about__product-name::after,
+.about__product-name-milk::after,
+.about__product-name-cof::after {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 6px;
+    background-image: url(/src/images/icons), url(/src/images/icons/ellipse.svg), url(/src/images/icons/ellipse.svg);
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+}
+
+.product-name {
     font-family: 'Titan One';
     font-style: normal;
     font-weight: 400;
@@ -55,7 +84,7 @@
     text-transform: uppercase;
     color: var(--primary-white-color);
     padding: 160px 53px 32px 53px;
-    margin-top: 0;
+   
 }
 
 .about__product-scroll-btn {
@@ -71,42 +100,11 @@
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 152%;
-    max-width: 206;
+    line-height: 1.5;
+    max-width: 200px;
     text-align: center;
     letter-spacing: 0.04em;
     margin: 0 40px 32px 40px;
-}
-
-.about__product-dots {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 32px;
-}
-
-.about__product-dots-decor {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: var(--primary-white-color);
-
-    &:not(:last-child) {
-        margin-right: 4px;
-    }
-}
-
-.about__product-list-btn {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.about__product-thumb {
-    position: absolute;
-    left: 20px;
-    bottom: 30px;
-    width: 280px;
-    height: 280px;
 }
 
 .about__product-button {
@@ -115,4 +113,93 @@
     margin-right: auto;
     background-color: var(--product-pink-color);
 
+}
+
+
+
+.about__product-list-cof {
+    position: relative;
+    background-color: var(--product-creamy-color);
+    border-radius: 24px;
+    padding-bottom: 40px;
+}
+
+.about__product-name-cof::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(/src/images/mobile/mob-icecoffee-1x.png);
+    width: 280px;
+    height: 280px;
+    top: -140px;
+    left: 0;
+}
+
+.about__product-button-cof {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--product-creamy-color);
+}
+
+
+.about__product-list-cof {
+    position: relative;
+    background-color: var(--product-creamy-color);
+    border-radius: 24px;
+    padding-bottom: 40px;
+}
+
+.about__product-button-cof {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--product-creamy-color);
+}
+
+
+
+
+
+
+
+
+.about__product-list-milk {
+    position: relative;
+    background-color: var(--product-green-color);
+    border-radius: 24px;
+    padding-bottom: 40px;
+}
+
+.about__product-name-milk::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(/src/images/mobile/mob-milkshakes-1x.png);
+    width: 280px;
+    height: 280px;
+    top: -140px;
+    left: 0;
+}
+
+.about__product-button-milk {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--product-green-color);
+}
+
+
+.about__product-list-milk {
+    position: relative;
+    background-color: var(--product-green-color);
+    border-radius: 24px;
+    padding-bottom: 40px;
+}
+
+.about__product-button-milk {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--product-green-color);
 }
