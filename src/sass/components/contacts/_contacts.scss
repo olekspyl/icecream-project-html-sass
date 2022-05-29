@@ -1,18 +1,44 @@
+.contacts {
+    background-image: linear-gradient(
+        var(--primary-white-color) 22%,
+        var(--howitsmade-bg-color) 22%
+    );
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(
+            var(--primary-white-color) 15%,
+            var(--howitsmade-bg-color) 15%
+    ); 
+        }
+}
 .contacts__container {
+    padding-top: 24px;
+    padding-bottom: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media screen and (min-width: 768px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        }
 }
 .contacts__list {
     margin-bottom: -20px;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        margin-right: -32px;
+    }
 }
 .card {
     padding: 40px 32px;
-    width: 100%;
+    max-width: 100%;
     margin-bottom: 20px;
     background: var(--primary-white-color);
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
+    @media screen and (min-width: 768px) {
+            width: calc((100% - 64px) / 3);
+            margin-right: 32px;
+        }
 }
 .card__cafe {
     font-size: 12px;
@@ -28,10 +54,18 @@
     border-radius: 4px;
     letter-spacing: 0.04em;
     color: var(--primary-white-color);
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        height: 28px;
+        width: 73px;
+        }
 }
 .card__cafe--foodtruck {
     width: 130px;
     background: var(--product-green-color);
+    @media screen and (min-width: 768px) {
+        width: 138px;
+        }
 }
 .card__title {
     font-size: 12px;
@@ -40,6 +74,9 @@
     margin-top: 0;
     margin-bottom: 8px;
     color: var(--primary-black-color);
+    @media screen and (min-width: 768px) {
+            font-size: 14px;
+        }
 }
 .card__text {
     font-size: 12px;
@@ -47,13 +84,17 @@
     margin: 0;
     padding-bottom: 24px;
     color: var(--text-gray-color);
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid var(--review-element-color);
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 1.66;
+        }
 }
 .card__list {
     padding-top: 24px;
     padding-bottom: 24px;
     margin-bottom: 24px;
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid var(--review-element-color);
 }
 .card__item + .card__item {
     margin-top: 8px;
@@ -63,18 +104,28 @@
     line-height: 1.86;
     margin: 0;
     color: var(--primary-black-color);
+    @media screen and (min-width: 768px) {
+            font-size: 14px;
+        }
 }
 .card__time {
     font-size: 12px;
     line-height: 1.86;
     margin: 0;
     color: var(--light-pink-color);
+    @media screen and (min-width: 768px) {
+            font-size: 14px;
+        }
 }
 .card__link {
     display: block;
     font-size: 12px;
     line-height: 1.5;
     color: var(--text-gray-color);
+    @media screen and (min-width: 768px) {
+            font-size: 14px;
+            line-height: 1.83;
+        }
 }
 .contacts__button {
     min-width: 161px;
@@ -85,21 +136,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
-    background: #D41342;
+    color: var(--primary-white-color);
+    background: var(--dark-pink-color);
     border-radius: 22px;
+    @media screen and (min-width: 768px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
 }
 .contacts__button--second {
-    color: #D41342;
-    background-color: #FFFFFF;
+    color: var(--dark-pink-color);
+    background-color: var(--primary-white-color);
 }
 .contacts__secondlist {
     margin-top: 32px;
+    @media screen and (min-width: 768px) {
+            display: flex;
+            margin-top: 40px;
+        }
 }
 .contacts__seconditem + .contacts__seconditem {
-    margin-top: 10px;
+    @media screen and (max-width: 767px) {
+             margin-top: 10px;
+        } 
+    @media screen and (min-width: 768px) {
+          margin-left: 15px;
+        }
 }
 .button-icon {
-    margin-top: 2px;
+    margin-top: 5px;
     margin-left: 8px;
 }
