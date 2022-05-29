@@ -3,6 +3,7 @@ p {
 }
 .about {
     padding-top: 40px;
+    padding-bottom: 40px;
     background: var(--howitsmade-bg-color);
 }
 
@@ -41,7 +42,7 @@ p {
     background-repeat: no-repeat;
     background-attachment:scroll;
   
-    background-position: bottom 24% left;
+    background-position: bottom 25% left;
     @media screen and (min-width: 480px) and (max-width: 767px){
         background-position: bottom 28% center;
     }
@@ -123,7 +124,7 @@ p {
     
 }
 .about-list__text {
-    width: 100%;
+    width: 74%;
        
     
     font-weight: 500;
@@ -131,7 +132,7 @@ p {
         line-height: 1.58;
     color: var(--primary-black-color);
     @media screen and (min-width: 480px) and (max-width:767px) {
-        width: 220px;
+        width: 210px;
     
     }
     @media screen and (min-width: $tablet) {
@@ -151,7 +152,7 @@ p {
 }
 .about-list__desc {
     
-    width: 100%;
+    width: 73%;
             margin-top: 10px;
         font-weight: 500;
         font-size: 12px;
@@ -163,7 +164,7 @@ p {
 
     
 @media screen and (min-width: 480px) and (max-width:767px) {
-    width: 220px;
+    width: 197px;
 
 }
 
@@ -189,8 +190,7 @@ p {
         font-weight: 700;
         font-size: 14px;
         line-height: 18px;
-        margin-bottom: 40px;
-
+        
         color: #D41443;
         width: 176px;
         height: 44px;
