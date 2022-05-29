@@ -78,6 +78,19 @@ p {
         
     //         }
     // }
+.about{
+        @media screen and (min-width:1200px) {
+                background-image: url(..//images/desktop/desk-bcg-milk-1x.png);
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-position: center bottom 14%;
+           
+        }
+    }
+
+
+
+
 
 
 .about-name {
