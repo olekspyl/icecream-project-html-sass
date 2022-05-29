@@ -55,9 +55,8 @@
   &:hover,
   &:focus {
     transform: scale(1.1);
-    border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 1px 3px rgba(212, 20, 67, 0.3),
-      0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(214, 16, 66, 0.3);
   }
   &:first-child::before {
     content: url('../images/mobile/mob-udder-bucket-1x.png');
