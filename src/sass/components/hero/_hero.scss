@@ -1,28 +1,27 @@
 .hero {
-  // padding-top: 136px;
-  // padding-bottom: 158px;
+  position: relative;
+
+  padding-top: 136px;
+  padding-bottom: 158px;
+
+  overflow: hidden;
 
   background-color: var(--product-pink-color);
 
-  @media screen and (max-width: $mobile) {
-    padding-top: 136px;
-    padding-bottom: 158px;
+  & .container {
     position: relative;
-    overflow: hidden;
   }
 
   &__back {
     display: block;
+    width: 345px;
+    height: 345px;
+    right: -62px;
+    bottom: -83px;
 
     background: var(--light-pink-color);
     border-radius: 50%;
     position: absolute;
-    @media screen and (max-width: $mobile) {
-      width: 345px;
-      height: 345px;
-      left: 36px;
-      bottom: 75px;
-    }
   }
 }
 
@@ -35,6 +34,7 @@
 .hero__title {
   position: relative;
   z-index: 1;
+  max-width: 218px;
   font-family: 'Titan One';
   font-weight: 400;
   font-size: 26px;
@@ -44,9 +44,6 @@
   margin-bottom: 20px;
 
   color: var(--primary-white-color);
-  @media screen and (max-width: $mobile) {
-    max-width: 218px;
-  }
 }
 
 .hero__title--accent {
@@ -77,15 +74,8 @@
   margin-right: 0px;
 }
 
-.hero__picture {
-  @media screen and (max-width: $mobile) {
-  }
-}
-
-.hero__item {
-  @media screen and (max-width: $mobile) {
-    position: absolute;
-    left: 117px;
-    bottom: 0;
-  }
-}
+.hero__icecream {
+  position: absolute;
+  right: 32px;
+  bottom: -158px;
+} 
