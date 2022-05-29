@@ -12,8 +12,16 @@
 <symbol id="icon-close-btn" viewBox="0 0 32 32">
 <path fill="#fff" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M2.52 2l26.96 28M2 29.48l28-26.96"></path>
 </symbol>
+<symbol id="icon-dots" viewBox="0 0 139 32">
+<path d="M85.333 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+<path d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+<path d="M138.667 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+</symbol>
 <symbol id="icon-ellipse" viewBox="0 0 32 32">
 <path fill="#ffa5ba" style="fill: var(--color3, #ffa5ba)" d="M32.192 16c0 8.837-7.206 16-16.096 16s-16.096-7.163-16.096-16c0-8.837 7.206-16 16.096-16s16.096 7.163 16.096 16z"></path>
+</symbol>
+<symbol id="icon-dot" viewBox="0 0 32 32">
+<path d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
 </symbol>
 <symbol id="icon-facebook" viewBox="0 0 16 32">
 <path fill="#fff" style="fill: var(--color1, #fff)" d="M14.266 15.97h-4.176v15.39h-6.326v-15.392h-3.011v-5.408h3.008v-3.498c0-2.504 1.184-6.422 6.384-6.422l4.688 0.019v5.25h-3.4c-0.557 0-1.342 0.282-1.342 1.475v3.184h4.73l-0.554 5.4z"></path>
