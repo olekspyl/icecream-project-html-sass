@@ -9,8 +9,10 @@ header {
 
 .page-header {
   @include flex(flex, center, space-between);
-  padding-right: 32px;
-  padding-left: 32px;
+  @media screen and (min-width: $tablet) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
 }
 
 .tablet-menu {
