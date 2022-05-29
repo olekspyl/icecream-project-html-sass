@@ -136,25 +136,24 @@
   padding-bottom: 40px;
   background: linear-gradient(
     180deg,
-    var(--howitsmade-bg-color) 24%,
+    var(--howitsmade-bg-color) 29.5%,
     var(--primary-white-color) 2%
   );
   @media screen and (min-width: 768px) {
     background: linear-gradient(
       180deg,
-      var(--howitsmade-bg-color) 30%,
+      var(--howitsmade-bg-color) 34.5%,
       var(--primary-white-color) 2%
     );
   }
   @media screen and (min-width: $desktop) {
     background: linear-gradient(
       180deg,
-      var(--howitsmade-bg-color) 33%,
+      var(--howitsmade-bg-color) 36%,
       var(--primary-white-color) 2%
     );
   }
 }
 .gallery__img {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }

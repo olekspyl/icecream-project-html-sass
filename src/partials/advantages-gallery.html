@@ -29,7 +29,7 @@
 <section class="section gallery">
   <div class="container">
     <h2 class="visually-hidden">Gallery</h2>
-    <picture class="gallery__img">
+    <picture>
       <source
         srcset="
           images/desktop/desk-gallery-1x.png 1x,
@@ -51,7 +51,11 @@
         "
         media="(min-width: 320px)"
       />
-      <img src="images/mobile/mob-gallery-1x.png" alt="фото-галерея" />
+      <img
+        class="gallery__img"
+        src="images/mobile/mob-gallery-1x.png"
+        alt="фото-галерея"
+      />
     </picture>
   </div>
 </section>
