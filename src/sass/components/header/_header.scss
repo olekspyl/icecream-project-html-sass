@@ -5,6 +5,10 @@ header {
   @media screen and (min-width: $tablet) {
     padding-top: 32px;
   }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 37px;
+  }
 }
 
 .page-header {
@@ -13,6 +17,24 @@ header {
     padding-right: 32px;
     padding-left: 32px;
   }
+
+  @media screen and (min-width: $desktop) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+.logo {
+  @include flex(flex, center, center);
+}
+.logo__text {
+  font-family: 'Titan One';
+  @include font-set(22px, 400, 1.14);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  color: var(--dark-pink-color);
+  margin-left: 20px;
 }
 
 .tablet-menu {
@@ -21,6 +43,36 @@ header {
     justify-content: baseline;
   }
 }
+
+/* ------ Navigation -------*/
+.navigation {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    @include flex(flex, center, center);
+  }
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 35px;
+}
+.navigation__link {
+  padding: 12px 0 12px 0;
+  @include font-set(16px, 700, 1.31);
+  color: var(--primary-white-color);
+
+  transition: color var(--duration) var(--timing-function);
+}
+
+.navigation__link:hover,
+.navigation__link:focus {
+  color: var(--dark-pink-color);
+}
+
+.navigation__link--current {
+  color: var(--dark-pink-color);
+}
+
 /*  ----- Mobile Menu ----- */
 
 .mobile-menu {
@@ -54,8 +106,8 @@ header {
 .mobile-menu.is-hidden {
   opacity: 0;
   pointer-events: none;
-
   transform: translateX(-100%);
+
   transition: opacity var(--duration) var(--timing-function),
     transform var(--duration) var(--timing-function);
 }
@@ -78,6 +130,11 @@ header {
   @media screen and (min-width: $tablet) {
     width: 186px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-bg-hover-color);
+  }
 }
 
 .button--tablet {
@@ -87,13 +144,14 @@ header {
     width: 160px;
     margin-left: 32px;
   }
-}
+  @media screen and (min-width: $desktop) {
+    margin-left: 0;
+  }
 
-.button--buy:hover,
-.button--buy:focus,
-.button--tablet:hover,
-.button--tablet:focus {
-  background-color: var(--button-bg-hover-color);
+  &:hover,
+  &:focus {
+    background-color: var(--button-bg-hover-color);
+  }
 }
 
 .button__icon {
@@ -116,23 +174,31 @@ header {
   transition: color var(--duration) var(--timing-function);
 }
 
-.menu-open-btn:hover,
-.menu-open-btn:focus {
-  --color2: var(--primary-white-color);
-}
-.menu-close-btn:hover,
-.menu-close-btn:focus {
-  --color1: var(--dark-pink-color);
+.menu-open-btn {
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    --color2: var(--primary-white-color);
+    transition: color var(--duration) var(--timing-function);
+  }
 }
 
 .menu-close-btn {
   margin: 20px 20px 26px auto;
+
+  &:hover,
+  &:focus {
+    --color1: var(--dark-pink-color);
+    transition: color var(--duration) var(--timing-function);
+  }
 }
 
 .icon-menu,
 .icon-cross {
   color: currentColor;
-
   transition: color var(--duration) var(--timing-function);
 }
 
@@ -147,10 +213,8 @@ header {
 }
 
 .menu-nav__item {
-  @include flex(flex, center);
-  justify-content: start;
+  @include flex(flex, center, start);
 
-  padding: 12px 20px 12px 20px;
   border: solid var(--mobile-menu-border-color);
   border-width: 1px 0 0 0;
 }
@@ -160,17 +224,17 @@ header {
 }
 
 .menu-nav__link {
+  padding: 12px 20px 12px 20px;
   @include font-set(14px, 700, 1.29);
   color: var(--primary-white-color);
-
   transition: color var(--duration) var(--timing-function);
-}
 
-.menu-nav__link:hover,
-.menu-nav__link:focus {
-  color: var(--dark-pink-color);
-}
+  &:hover,
+  &:focus {
+    color: var(--dark-pink-color);
+  }
 
-.menu-nav__link--current {
-  color: var(--dark-pink-color);
+  &--current {
+    color: var(--dark-pink-color);
+  }
 }
