@@ -292,8 +292,8 @@
 }
 
 .gallery__item--9 {
-  grid-column-start: 3;
-  grid-column-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 4;
   grid-row-start: 5;
   grid-row-end: 6;
 
@@ -306,10 +306,10 @@
 }
 
 .gallery__item--10 {
-  grid-column-start: 3;
-  grid-column-end: 5;
-  grid-row-start: 6;
-  grid-row-end: 7;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 5;
+  grid-row-end: 6;
 
   @media screen and (min-width: $tablet) {
     grid-column-start: 7;
