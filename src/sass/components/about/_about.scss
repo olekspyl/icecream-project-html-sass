@@ -56,13 +56,14 @@ p {
     background-image: url(..//images/mobile/mob-bcg-milk-1x.png);
     background-repeat: no-repeat;
     background-attachment:scroll;
-    @media screen and (max-width:479px) {
-    background-position: bottom 27% left;}
-
-    @media screen and (min-width: 480px) and (max-width: 767px){
-        background-position: bottom 28% center;
-    }
+   
 }
+ @media screen and (max-width:479px) {
+     background-position: bottom 27% left;
+ }
+ @media screen and (min-width: 480px) and (max-width: 767px) {
+     background-position: bottom 28% center;
+ }
 
 }
 
