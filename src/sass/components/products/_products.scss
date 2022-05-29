@@ -1,6 +1,12 @@
+
+.about__product-name {
+text-align: center;
+}
+
 .products {
-padding-top: 0px;
+padding-top: 80px;
     padding-bottom: 40px;
+   
 }
 .about__product {
     margin-left: auto;
@@ -37,8 +43,13 @@ padding-top: 0px;
     display: flex;
 }
 
+.about__product-item {
+width: 100%;
+}
+
 .about__product-item:not(:last-child) {
     margin-bottom: 140px;
+    
 }
 
 .about__product-list {
@@ -55,8 +66,10 @@ padding-top: 0px;
     background-image: url(/src/images/mobile/mob-icestrawberry-1x.png);
     width: 280px;
     height: 280px;
-    top: -140px;
-    left: 0;
+    position: absolute;
+        bottom: 351px;
+        left: 50%;
+        transform: translateX(-50%);
 }
 
 .about__product-name::after,
@@ -107,6 +120,8 @@ padding-top: 0px;
     text-align: center;
     letter-spacing: 0.04em;
     margin: 0 40px 32px 40px;
+        margin-left: auto;
+            margin-right: auto;
 }
 
 .about__product-button {
@@ -133,8 +148,9 @@ padding-top: 0px;
     background-image: url(/src/images/mobile/mob-icecoffee-1x.png);
     width: 280px;
     height: 280px;
-    top: -140px;
-    left: 0;
+            bottom: 351px;
+            left: 50%;
+            transform: translateX(-50%);
 }
 
 .about__product-button-cof {
@@ -180,8 +196,9 @@ padding-top: 0px;
     background-image: url(/src/images/mobile/mob-milkshakes-1x.png);
     width: 280px;
     height: 280px;
-    top: -140px;
-    left: 0;
+bottom: 351px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .about__product-button-milk {
