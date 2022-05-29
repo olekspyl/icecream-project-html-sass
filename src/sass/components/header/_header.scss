@@ -1,4 +1,5 @@
 header {
+  z-index: 2;
   background-color: var(--product-pink-color);
   padding-top: 8px;
 
@@ -27,6 +28,7 @@ header {
 .logo {
   @include flex(flex, center, center);
 }
+
 .logo__text {
   font-family: 'Titan One';
   @include font-set(22px, 400, 1.14);
@@ -56,21 +58,22 @@ header {
 .navigation__item:not(:last-child) {
   margin-right: 35px;
 }
+
 .navigation__link {
   padding: 12px 0 12px 0;
   @include font-set(16px, 700, 1.31);
   color: var(--primary-white-color);
 
   transition: color var(--duration) var(--timing-function);
-}
 
-.navigation__link:hover,
-.navigation__link:focus {
-  color: var(--dark-pink-color);
-}
+  &:hover,
+  &:focus {
+    color: var(--dark-pink-color);
+  }
 
-.navigation__link--current {
-  color: var(--dark-pink-color);
+  &--current {
+    color: var(--dark-pink-color);
+  }
 }
 
 /*  ----- Mobile Menu ----- */
@@ -95,7 +98,7 @@ header {
   }
 
   @media screen and (min-width: $tablet) {
-    width: 254px;
+    width: 410px;
   }
 }
 
@@ -105,8 +108,8 @@ header {
 
 .mobile-menu.is-hidden {
   opacity: 0;
-  pointer-events: none;
   transform: translateX(-100%);
+  pointer-events: none;
 
   transition: opacity var(--duration) var(--timing-function),
     transform var(--duration) var(--timing-function);
@@ -170,7 +173,6 @@ header {
   padding: 0;
   background-color: transparent;
   color: currentColor;
-
   transition: color var(--duration) var(--timing-function);
 }
 
@@ -182,7 +184,6 @@ header {
   &:hover,
   &:focus {
     --color2: var(--primary-white-color);
-    transition: color var(--duration) var(--timing-function);
   }
 }
 
@@ -192,25 +193,24 @@ header {
   &:hover,
   &:focus {
     --color1: var(--dark-pink-color);
-    transition: color var(--duration) var(--timing-function);
   }
 }
 
-.icon-menu,
-.icon-cross {
-  color: currentColor;
-  transition: color var(--duration) var(--timing-function);
-}
+// .icon-menu,
+// .icon-cross {
+//   color: currentColor;
+//   transition: color var(--duration) var(--timing-function);
+// }
 
-.menu-open-btn:hover .icon-menu,
-.menu-open-btn:focus .icon-menu {
-  fill: var(--dark-pink-color);
-}
+// .menu-open-btn:hover .icon-menu,
+// .menu-open-btn:focus .icon-menu {
+//   fill: var(--dark-pink-color);
+// }
 
-.menu-close-btn:hover .icon-cross,
-.menu-close-btn:focus .icon-cross {
-  fill: var(--dark-pink-color);
-}
+// .menu-close-btn:hover .icon-cross,
+// .menu-close-btn:focus .icon-cross {
+//   fill: var(--dark-pink-color);
+// }
 
 .menu-nav__item {
   @include flex(flex, center, start);
