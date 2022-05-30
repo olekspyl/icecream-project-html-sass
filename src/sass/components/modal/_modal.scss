@@ -236,12 +236,16 @@
 }
 
 .modal__agree + .modal__agree-label span {
-    border: 2px solid var(--dark-pink-color);
+    border: 2px solid var(--light-pink-color);
     display: inline-flex;
     margin-right: 9px;
     border-radius: 2px;
     align-items: baseline;
     width: 18px;
+    transition: background-color var(--duration) var(--timing-function);
+
+    
+
 
     
         // @media screen and (max-width: 479px) {
@@ -256,9 +260,6 @@
 
 }
 
-.modal__agree:checked+.modal__agree-label span {
-    background-color: var(--dark-pink-color);
-    
+.modal__agree:focus +.modal__agree-label span {
+    border-color: var(--dark-pink-color);
 }
-
-
