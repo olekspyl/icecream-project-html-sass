@@ -89,3 +89,8 @@ p {
   color: var(--dark-pink-color);
   text-align: center;
 }
+
+body.modal-open,
+body.menu-open {
+  overflow: hidden;
+}
