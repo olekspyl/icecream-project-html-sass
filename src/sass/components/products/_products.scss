@@ -34,20 +34,34 @@ padding-top: 80px;
     text-transform: uppercase;
     color: var(--dark-pink-color);
     margin-bottom: 148px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 16px;
+    }
+    
 }
 
 .about__product-gallery {
-    flex-direction: column;
     align-items: center;
     display: flex;
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }
+    @media screen and (min-width: 768px) {
+        margin: -8px;
+    }
 }
 
 .about__product-item {
 width: 100%;
+@media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 3*8px)/3);
+    margin: 8px;
 }
-
-.about__product-item:not(:last-child) {
-    margin-bottom: 140px;
+@media screen and (max-width: 767px) {
+&:not(:last-child) {
+        margin-bottom: 140px;
+}
+}
 }
 
 .about__product-list {
