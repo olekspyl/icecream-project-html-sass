@@ -78,6 +78,7 @@ p {
     @media screen and (min-device-pixel-ratio: 2),
   (min-resolution:192dpi),
    (min-resolution:2dppx) {
+      
     .about {
       background-image: url(..//images/desktop/desk-bcg-milk-2x.png);
                         }
@@ -140,6 +141,11 @@ p {
          @media screen and (min-width: $desktop) {
         margin-right: 139px
          }
+
+       &:hover,
+     &:focus {transform: scale(1.1);}
+
+    transition: transform var(--duration)var(--timing-function);
     
 }
 
@@ -154,7 +160,10 @@ p {
  }
     }
 
- 
+ .about-div{
+    @media screen and (min-width: $desktop) {width: 428px;}
+@media screen and (min-width: 768px) and (max-width:1199px) {width: 322px;}
+ }
 .about-picture__another{
     width: 100%;
     
@@ -167,28 +176,26 @@ p {
         font-size: 12px;
         line-height: 1.58;
     color: var(--primary-black-color);
+
     @media screen and (min-width: 480px) and (max-width:767px) {
-        width: 210px;
-    
-    }
+        width: 210px;}
+
     @media screen and (min-width: $tablet) {
         width: 334px;
         font-size: 14px;
-            line-height: 1.78;
+        line-height: 1.78;}
             
-        }
+        
         @media screen and (min-width: $desktop) {
-            width: 425px;
+            width:428px;
             margin-top: 72px;
                 margin-bottom: 32px;
              font-size: 16px;
             line-height: 1.75;
-            
         }
+
          @media screen and (max-width: $tablet){
              margin-top: 40px;
-         
-
          }
         
 }
@@ -198,31 +205,29 @@ p {
         margin-top: 22px;}
 }
 .about-list__desc {
-    
-    width: 73%;
-          
+         width: 73%;
         font-weight: 500;
         font-size: 12px;
         line-height: 1.58;
-    color: var(--text-gray-color);
+        color: var(--text-gray-color);
 
     
 @media screen and (min-width: 480px) and (max-width:767px) {
-    width: 197px;
+    width: 210px;
 
 }
     @media screen and (min-width: $tablet) {
-        width: 320px;
+        width: 322px;
         letter-spacing: 0.04em;
         font-size: 14px;
-            line-height: 1.78;
+        line-height: 1.78;
             
         }
     
         @media screen and (min-width: $desktop) {
             width: 440px;
             letter-spacing: 0.04em;
-        font-size: 14px;
+            font-size: 14px;
             line-height: 1.92;
         }
                 
@@ -232,7 +237,7 @@ p {
         font-weight: 700;
         font-size: 14px;
         line-height: 18px;
-        
+        transition: background var(--duration) var(--timing-function);
         color: #D41443;
         width: 176px;
         height: 44px;
