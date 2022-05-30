@@ -30,7 +30,7 @@ header {
 }
 
 .logo__text {
-  font-family: 'Titan One';
+  @extend %secondary-font;
   @include font-set(22px, 400, 1.14);
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -47,6 +47,10 @@ header {
 }
 
 /* ------ Navigation -------*/
+.nav {
+  z-index: 2;
+}
+
 .navigation {
   display: none;
 
@@ -77,21 +81,80 @@ header {
 }
 
 /*  ----- Mobile Menu ----- */
+.header__menu {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  & .header__icon--close {
+    display: none;
+  }
 
-.mobile-menu {
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.header__menu--burger {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  right: 0;
+  width: 24px;
+  height: 2px;
+  background-color: var(--dark-pink-color);
+  transform: translate(0);
+  transition: var(--duration) var(--timing-function);
+
+  &::before,
+  &::after {
+    content: '';
+    background-color: var(--dark-pink-color);
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    left: 0;
+    transition: var(--duration) var(--timing-function);
+  }
+  &::before {
+    top: -7px;
+  }
+  &::after {
+    top: 7px;
+  }
+}
+
+.header__menu.is-open .header__menu--burger {
+  background-color: transparent;
+  &::before {
+    transform: rotate(45deg) translateX(10.5px);
+    background-color: var(--primary-white-color);
+  }
+  &::after {
+    transform: rotate(-45deg) translateX(9.5px);
+    background-color: var(--primary-white-color);
+  }
+}
+
+.mobile-menu__content {
+  padding-top: 70px;
   position: fixed;
   right: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
   z-index: 2;
-  overflow-y: scroll;
+  text-align: center;
+  transform: translateX(0);
+  transition: transform var(--duration) var(--timing-function);
   background-color: var(--mobile-menu-bg-color);
 
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity var(--duration) var(--timing-function),
-    transform var(--duration) var(--timing-function);
+  & .is-open {
+    display: block;
+  }
 
   @media screen and (min-width: $mobile) {
     width: 250px;
@@ -100,38 +163,42 @@ header {
   @media screen and (min-width: $tablet) {
     width: 410px;
   }
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
 }
 
-.no-scroll {
-  overflow: hidden;
+.mobile-menu__content--is-hidden {
+  @media screen and (max-width: 1200px) {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform var(--duration) var(--timing-function);
+    height: 100%;
+    pointer-events: none;
+  }
 }
 
-.mobile-menu.is-hidden {
-  opacity: 0;
-  transform: translateX(-100%);
-  pointer-events: none;
+.mobile-menu__container {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
 
-  transition: opacity var(--duration) var(--timing-function),
-    transform var(--duration) var(--timing-function);
-}
-
-.mobile-menu-container {
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-  height: 100%;
-  max-width: 480px;
-  margin-right: auto;
-  margin-left: auto;
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .button--buy {
   width: 209px;
-  margin: 0 auto 20px auto;
-
+  margin-left: auto;
+  margin-right: auto;
   transition: background-color var(--duration) var(--timing-function);
   @media screen and (min-width: $tablet) {
     width: 186px;
+    margin-top: 20px;
   }
 
   &:hover,
@@ -160,6 +227,7 @@ header {
 .button__icon {
   --color1: var(--dark-pink-color);
 }
+
 .button__text {
   margin-right: 15px;
 }
@@ -167,51 +235,7 @@ header {
   margin-right: 8px;
 }
 
-.menu-open-btn,
-.menu-close-btn {
-  display: block;
-  padding: 0;
-  background-color: transparent;
-  color: currentColor;
-  transition: color var(--duration) var(--timing-function);
-}
-
-.menu-open-btn {
-  @media screen and (min-width: $desktop) {
-    display: none;
-  }
-
-  &:hover,
-  &:focus {
-    --color2: var(--primary-white-color);
-  }
-}
-
-.menu-close-btn {
-  margin: 20px 20px 26px auto;
-
-  &:hover,
-  &:focus {
-    --color1: var(--dark-pink-color);
-  }
-}
-
-// .icon-menu,
-// .icon-cross {
-//   color: currentColor;
-//   transition: color var(--duration) var(--timing-function);
-// }
-
-// .menu-open-btn:hover .icon-menu,
-// .menu-open-btn:focus .icon-menu {
-//   fill: var(--dark-pink-color);
-// }
-
-// .menu-close-btn:hover .icon-cross,
-// .menu-close-btn:focus .icon-cross {
-//   fill: var(--dark-pink-color);
-// }
-
+// Menu Nav
 .menu-nav__item {
   @include flex(flex, center, start);
 
@@ -238,3 +262,50 @@ header {
     color: var(--dark-pink-color);
   }
 }
+
+// .mobile-menu {
+//   position: fixed;
+//   right: 0;
+//   top: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   z-index: 2;
+//   overflow-y: scroll;
+//   background-color: var(--mobile-menu-bg-color);
+
+//   opacity: 1;
+//   transform: translateX(0);
+//   transition: opacity var(--duration) var(--timing-function),
+//     transform var(--duration) var(--timing-function);
+
+//   @media screen and (min-width: $mobile) {
+//     width: 250px;
+//   }
+
+//   @media screen and (min-width: $tablet) {
+//     width: 410px;
+//   }
+// }
+
+// .no-scroll {
+//   overflow: hidden;
+// }
+
+// .mobile-menu.is-hidden {
+//   opacity: 0;
+//   transform: translateX(-100%);
+//   pointer-events: none;
+
+//   transition: opacity var(--duration) var(--timing-function),
+//     transform var(--duration) var(--timing-function);
+// }
+
+// .mobile-menu-container {
+//   display: flex;
+//   flex-direction: column;
+//   overflow: auto;
+//   height: 100%;
+//   max-width: 480px;
+//   margin-right: auto;
+//   margin-left: auto;
+// }
