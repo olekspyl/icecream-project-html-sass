@@ -52,9 +52,15 @@ width: 100%;
 
 .about__product-list {
     position: relative;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     background-color: var(--product-pink-color);
     border-radius: 24px;
-    padding-bottom: 40px;
+    padding: 160px 53px 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .about__product-name::before{
@@ -96,7 +102,8 @@ width: 100%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--primary-white-color);
-    padding: 160px 53px 32px 53px;
+   margin-bottom: 32px;
+    
    
 }
 
@@ -110,26 +117,41 @@ width: 100%;
     text-align: center;
     letter-spacing: 0.04em;
     margin-bottom: 32;
-        margin-left: auto;
-            margin-right: auto;
 }
 
 .about__product-button {
-    display: block;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--primary-white-color);
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    fill: var(--dark-pink-color);
+    transition: background-color var(--duration) var(--timing-function);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+}
+
+.about__product-button:hover,
+.about__product-button:focus {
+    background-color: #ecebeb
+}
+
+.about__product__arrow-icon {
+    width: 10px;
+        height: 10px;
+        fill: var(--dark-pink-color);
 }
 
 .about__product-list-cof {
     position: relative;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     background-color: var(--product-creamy-color);
     border-radius: 24px;
-    padding-bottom: 40px;
+    padding: 160px 53px 40px;
 }
 
 .about__product-name-cof::before {
@@ -144,18 +166,15 @@ width: 100%;
             transform: translateX(-50%);
 }
 
-.about__product-list-cof {
-    position: relative;
-    background-color: var(--product-creamy-color);
-    border-radius: 24px;
-    padding-bottom: 40px;
-}
-
 .about__product-list-milk {
     position: relative;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     background-color: var(--product-green-color);
     border-radius: 24px;
-    padding-bottom: 40px;
+    padding: 160px 53px 40px;
 }
 
 .about__product-name-milk::before {
@@ -170,16 +189,3 @@ bottom: 351px;
     transform: translateX(-50%);
 }
 
-.about__product-list-milk {
-    position: relative;
-    background-color: var(--product-green-color);
-    border-radius: 24px;
-    padding-bottom: 40px;
-}
-
-.about__product-button-milk {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--product-green-color);
-}
