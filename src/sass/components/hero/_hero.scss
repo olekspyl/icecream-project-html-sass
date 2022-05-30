@@ -61,7 +61,6 @@
   line-height: 1.15;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  
   color: var(--primary-white-color);
   @media screen and (min-width: $tablet) {
     max-width: 162px;
@@ -132,7 +131,7 @@
   transition: background-color var(--duration) var(--timing-function);
   &:hover,
   &:focus {
-    background-color: #C7133E;
+    background-color: #c7133e;
   }
   @media screen and (min-width: $desktop) {
     width: 107px;
@@ -153,7 +152,7 @@
   transition: background-color var(--duration) var(--timing-function);
   &:hover,
   &:focus {
-    background-color: #ECEBEB;;
+    background-color: #ecebeb;
   }
   @media screen and (min-width: $desktop) {
     width: 138px;
@@ -214,13 +213,11 @@
     line-height: 1.14;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    
     color: var(--dark-pink-color);
 
     .hero__item-numbers:nth-child(1) & {
       text-align: left;
     }
-    
     .hero__item-numbers:nth-child(2) & {
       text-align: center;
     }
@@ -237,19 +234,19 @@
     font-size: 8px;
     line-height: 10px;
     text-align: center;
-    
-    color: #FFFFFF;
+
+    color: #ffffff;
     &::after {
       content: '';
-    
+
       position: absolute;
       top: 0;
       right: 0;
-    
+
       display: inline-block;
       width: 16px;
       height: 16px;
-    
+
       border-radius: 50%;
       background-color: var(--primary-white-color);
       @media screen and (min-width: $desktop) {
@@ -260,7 +257,6 @@
     .hero__item-numbers:nth-child(1) & {
       text-align: center;
     }
-    
     .hero__item-numbers:nth-child(2) & {
       text-align: left;
     }
@@ -276,7 +272,7 @@
   @media screen and (min-width: $tablet) {
     position: relative;
     z-index: 1;
-    display: inline-flex;
+    display: flex;
     align-items: center;
   }
 }
@@ -285,11 +281,11 @@
   @media screen and (min-width: $tablet) {
     max-width: 114px;
     margin-bottom: 7px;
-    
+
     font-weight: 400;
     font-size: 8px;
     line-height: 1.5;
-    
+
     color: var(--primary-white-color);
   }
   @media screen and (min-width: $desktop) {
@@ -308,13 +304,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
     border-radius: 50%;
     background-color: var(--primary-white-color);
     transition: background-color var(--duration) var(--timing-function);
     &:hover,
     &:focus {
-      background-color: #ECEBEB;
+      background-color: #ecebeb;
     }
   }
   @media screen and (min-width: $desktop) {

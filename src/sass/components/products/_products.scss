@@ -34,27 +34,49 @@ padding-top: 80px;
     text-transform: uppercase;
     color: var(--dark-pink-color);
     margin-bottom: 148px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 154px;
+    }
+    
 }
 
 .about__product-gallery {
-    flex-direction: column;
     align-items: center;
     display: flex;
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }
+    @media screen and (min-width: 768px) {
+        margin: -8px;
+    }
 }
 
 .about__product-item {
 width: 100%;
+@media screen and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: 140px;
+        }
+    }
+@media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 3*8px)/3);
+    margin: 8px;
 }
 
-.about__product-item:not(:last-child) {
-    margin-bottom: 140px;
 }
 
 .about__product-list {
     position: relative;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     background-color: var(--product-pink-color);
     border-radius: 24px;
-    padding-bottom: 40px;
+    padding: 160px 53px 40px;
+    @media screen and (min-width: 768px) {
+        padding: 118px 25px 40px;
+    }
 }
 
 .about__product-name::before{
@@ -65,9 +87,15 @@ width: 100%;
     width: 280px;
     height: 280px;
     position: absolute;
-        bottom: 351px;
+        bottom: 350px;
         left: 50%;
         transform: translateX(-50%);
+        @media screen and (min-width: 768px) {
+        width: 224px;
+            height: 224px;
+            background-image: url(/src/images/tablet/tab-icestrawberry-1x.png);
+            bottom: 390px;
+        }
 }
 
 .about__product-name::after,
@@ -96,7 +124,8 @@ width: 100%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--primary-white-color);
-    padding: 160px 53px 32px 53px;
+   margin-bottom: 32px;
+    
    
 }
 
@@ -110,26 +139,47 @@ width: 100%;
     text-align: center;
     letter-spacing: 0.04em;
     margin-bottom: 32;
-        margin-left: auto;
-            margin-right: auto;
+    @media screen and (min-width: 768px) {
+        line-height: 1.7;
+    }
 }
 
 .about__product-button {
-    display: block;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--primary-white-color);
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    fill: var(--dark-pink-color);
+    transition: background-color var(--duration) var(--timing-function);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+}
+
+.about__product-button:hover,
+.about__product-button:focus {
+    background-color: #ecebeb
+}
+
+.about__product__arrow-icon {
+    width: 10px;
+        height: 10px;
+        fill: var(--dark-pink-color);
 }
 
 .about__product-list-cof {
     position: relative;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     background-color: var(--product-creamy-color);
     border-radius: 24px;
-    padding-bottom: 40px;
+    padding: 160px 53px 40px;
+    @media screen and (min-width: 768px) {
+            padding: 118px 25px 40px;
+        }
 }
 
 .about__product-name-cof::before {
@@ -139,23 +189,29 @@ width: 100%;
     background-image: url(/src/images/mobile/mob-icecoffee-1x.png);
     width: 280px;
     height: 280px;
-            bottom: 351px;
+            bottom: 350px;
             left: 50%;
             transform: translateX(-50%);
-}
-
-.about__product-list-cof {
-    position: relative;
-    background-color: var(--product-creamy-color);
-    border-radius: 24px;
-    padding-bottom: 40px;
+            @media screen and (min-width: 768px) {
+                    width: 224px;
+                    height: 224px;
+                    background-image: url(/src/images/tablet/tab-icecoffee-1x.png);
+                    bottom: 390px;
+                }
 }
 
 .about__product-list-milk {
     position: relative;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     background-color: var(--product-green-color);
     border-radius: 24px;
-    padding-bottom: 40px;
+    padding: 160px 53px 40px;
+    @media screen and (min-width: 768px) {
+            padding: 118px 25px 40px;
+        }
 }
 
 .about__product-name-milk::before {
@@ -168,18 +224,11 @@ width: 100%;
 bottom: 351px;
     left: 50%;
     transform: translateX(-50%);
+    @media screen and (min-width: 768px) {
+            width: 224px;
+            height: 224px;
+            background-image: url(/src/images/tablet/tab-milkshakes-1x.png);
+            bottom: 390px;
+        }
 }
 
-.about__product-list-milk {
-    position: relative;
-    background-color: var(--product-green-color);
-    border-radius: 24px;
-    padding-bottom: 40px;
-}
-
-.about__product-button-milk {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--product-green-color);
-}
