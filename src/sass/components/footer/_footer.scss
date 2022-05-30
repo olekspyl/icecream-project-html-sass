@@ -5,36 +5,89 @@
 
 .footer {
     background-color: var(--howitsmade-bg-color);
+    width: 100%;
     padding-bottom: 20px;
+    padding-top: 24px;
+
+        @media screen and (min-width: $tablet) {
+        padding-top: 20px;
+        padding-bottom: 8px;
+        }
+
+        @media screen and (min-width: $desktop) {
+        padding-top: 60px;
+        }
+    
 }
 
 .footer__title {
+    display: flex;
+    flex-direction: column;
     margin-top: 0px;
-    margin-bottom: 16px;
-    max-width: 232px;
+    margin-bottom: 40px;
 
+    font-weight: 400;
     font-size: 18px;
     line-height: 1.16;
     text-transform: uppercase;
     color: var(--light-pink-color);
+
+        @media screen and (max-width: $tablet) {
+        max-width: 232px;
+        }
+
+        @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        font-size: 26px;
+        line-height: 1.15;
+        letter-spacing: 0.04em;
+        max-width: 340px;
+        margin-bottom: 40px;
+        }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 30px;
+        line-height: 1.13;
+        letter-spacing: 0.04em;
+        margin-bottom: 60px;
+        }
 }
 
 .footer__subtitle {
+    padding-top: 16px;
     margin-top: 0px;
-    margin-bottom: 40px;
-    max-width: 200px;
 
+    color: var(--dark-pink-color);
+    font-weight: 400;
     font-size: 34px;
     line-height: 1.14;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+
+        @media screen and (max-width: $tablet) {
+        max-width: 200px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: $desktop) {
+        font-size: 48px;
+        line-height: 1.14;
+        letter-spacing: 0.06em;
+        margin-bottom: 0px;
+        max-width: 340px;
+        padding-top: 12px;
+        }
+
+        @media screen and (min-width: $desktop) {
+        font-size: 58px;
+        line-height: 1.13;
+        letter-spacing: 0.06em;
+        margin-bottom: 0px;
+        padding-top: 16px;
+        }
 }
 
 .footer__social--item {
     width: 32px;
     height: 32px;
-
-    background-color: var(--icon-bg-color);
     border-radius: 50%;
 
     &:focus,
@@ -45,6 +98,14 @@
 
 .footer__social--item:not(:last-child) {
     margin-right: 28px;
+
+        @media screen and (min-width: $tablet) {
+        margin-right: 30px; 
+        }
+
+        @media screen and (min-width: $desktop) {
+        margin-right: 24px; 
+        }
 }
 
 .footer__social--list {
@@ -59,8 +120,13 @@
     align-items: center;
     width: 32px;
     height: 32px;
+    background-color: var(--icon-bg-color);
     cursor: pointer;
     border-radius: 50%;
+    
+    transition-property: background-color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 
     &:hover,
     &:focus {
@@ -76,6 +142,19 @@
     font-size: 12px;
     line-height: 1.86;
     color: var(--primary-black-color);
+
+    &:hover,
+    &:focus {
+        color: var(--dark-pink-color);
+    }
+
+        @media screen and (min-width: $tablet) {
+        font-size: 14px;
+        }
+
+        @media screen and (min-width: $desktop) {
+        font-size: 16px;
+        }
 }
 
 .footer__tel--number {
@@ -85,11 +164,29 @@
 .footer__tel--link {
     text-align: right;
     margin-bottom: 40px;
+
+        @media screen and (min-width: $tablet) {
+        margin-bottom: 0px;
+        }   
 }
 
 .footer__container {
    border-bottom: 1px solid var(--review-element-color);
    margin-bottom: 16px;
+
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+        padding-right: 16px;
+        padding-left: 16px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+        align-items: baseline;
+    }
 }
 
 .footer__copyright {   
@@ -102,10 +199,18 @@
     line-height: 1.52;
     text-align: center;
     color: var(--text-gray-color);
-    max-width: 150px;
 
     margin-left: auto;
     margin-right: auto;
+
+        @media screen and (max-width: $tablet) {
+        max-width: 150px;
+        }
+
+        @media screen and (min-width: $tablet) {
+        line-height: 1.86;
+        letter-spacing: 0.02em;
+        }
 }
 
 

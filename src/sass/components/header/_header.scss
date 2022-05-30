@@ -1,16 +1,42 @@
 header {
+  z-index: 2;
   background-color: var(--product-pink-color);
   padding-top: 8px;
 
   @media screen and (min-width: $tablet) {
     padding-top: 32px;
   }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 37px;
+  }
 }
 
 .page-header {
   @include flex(flex, center, space-between);
-  padding-right: 32px;
-  padding-left: 32px;
+  @media screen and (min-width: $tablet) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+.logo {
+  @include flex(flex, center, center);
+}
+
+.logo__text {
+  @extend %secondary-font;
+  @include font-set(22px, 400, 1.14);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  color: var(--dark-pink-color);
+  margin-left: 20px;
 }
 
 .tablet-menu {
@@ -19,6 +45,40 @@ header {
     justify-content: baseline;
   }
 }
+
+/* ------ Navigation -------*/
+.nav {
+  z-index: 2;
+}
+.navigation {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    @include flex(flex, center, center);
+  }
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.navigation__link {
+  padding: 12px 0 12px 0;
+  @include font-set(16px, 700, 1.31);
+  color: var(--primary-white-color);
+
+  transition: color var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--dark-pink-color);
+  }
+
+  &--current {
+    color: var(--dark-pink-color);
+  }
+}
+
 /*  ----- Mobile Menu ----- */
 
 .mobile-menu {
@@ -33,15 +93,15 @@ header {
 
   opacity: 1;
   transform: translateX(0);
-  transition: opacity var(--duration) var(--timing-function),
-    transform var(--duration) var(--timing-function);
+  transition: opacity 500ms var(--timing-function),
+    transform 500ms var(--timing-function);
 
   @media screen and (min-width: $mobile) {
     width: 250px;
   }
 
   @media screen and (min-width: $tablet) {
-    width: 254px;
+    width: 410px;
   }
 }
 
@@ -51,11 +111,12 @@ header {
 
 .mobile-menu.is-hidden {
   opacity: 0;
-  pointer-events: none;
-
   transform: translateX(-100%);
-  transition: opacity var(--duration) var(--timing-function),
-    transform var(--duration) var(--timing-function);
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 500ms var(--timing-function),
+    transform 500ms var(--timing-function),
+    visibility 500ms var(--timing-function);
 }
 
 .mobile-menu-container {
@@ -76,6 +137,11 @@ header {
   @media screen and (min-width: $tablet) {
     width: 186px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-bg-hover-color);
+  }
 }
 
 .button--tablet {
@@ -85,13 +151,14 @@ header {
     width: 160px;
     margin-left: 32px;
   }
-}
+  @media screen and (min-width: $desktop) {
+    margin-left: 0;
+  }
 
-.button--buy:hover,
-.button--buy:focus,
-.button--tablet:hover,
-.button--tablet:focus {
-  background-color: var(--button-bg-hover-color);
+  &:hover,
+  &:focus {
+    background-color: var(--button-bg-hover-color);
+  }
 }
 
 .button__icon {
@@ -110,45 +177,48 @@ header {
   padding: 0;
   background-color: transparent;
   color: currentColor;
-
   transition: color var(--duration) var(--timing-function);
 }
 
-.menu-open-btn:hover,
-.menu-open-btn:focus {
-  --color2: var(--primary-white-color);
-}
-.menu-close-btn:hover,
-.menu-close-btn:focus {
-  --color1: var(--dark-pink-color);
+.menu-open-btn {
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+
+  // &:hover,
+  // &:focus {
+  //   --color2: var(--primary-white-color);
+  // }
 }
 
 .menu-close-btn {
   margin: 20px 20px 26px auto;
+
+  // &:hover,
+  // &:focus {
+  //   --color1: var(--dark-pink-color);
+  // }
 }
 
 .icon-menu,
 .icon-cross {
   color: currentColor;
-
-  transition: color var(--duration) var(--timing-function);
+  transition: color 2s var(--timing-function), fill 2s var(--timing-function);
 }
 
 .menu-open-btn:hover .icon-menu,
 .menu-open-btn:focus .icon-menu {
-  fill: var(--dark-pink-color);
+  --color2: var(--primary-white-color);
 }
 
 .menu-close-btn:hover .icon-cross,
 .menu-close-btn:focus .icon-cross {
-  fill: var(--dark-pink-color);
+  --color1: var(--dark-pink-color);
 }
 
 .menu-nav__item {
-  @include flex(flex, center);
-  justify-content: start;
+  @include flex(flex, center, start);
 
-  padding: 12px 20px 12px 20px;
   border: solid var(--mobile-menu-border-color);
   border-width: 1px 0 0 0;
 }
@@ -158,17 +228,17 @@ header {
 }
 
 .menu-nav__link {
+  padding: 12px 20px 12px 20px;
   @include font-set(14px, 700, 1.29);
   color: var(--primary-white-color);
-
   transition: color var(--duration) var(--timing-function);
-}
 
-.menu-nav__link:hover,
-.menu-nav__link:focus {
-  color: var(--dark-pink-color);
-}
+  &:hover,
+  &:focus {
+    color: var(--dark-pink-color);
+  }
 
-.menu-nav__link--current {
-  color: var(--dark-pink-color);
+  &--current {
+    color: var(--dark-pink-color);
+  }
 }

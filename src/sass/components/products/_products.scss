@@ -1,6 +1,14 @@
-.about__product {
-    padding-top: 80px;
+
+.about__product-name {
+text-align: center;
+}
+
+.products {
+padding-top: 80px;
     padding-bottom: 40px;
+   
+}
+.about__product {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 148px;
@@ -25,26 +33,88 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--dark-pink-color);
-    margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 148px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 154px;
+    }
+    
 }
 
 .about__product-gallery {
-    margin-top: 0 auto;
+    align-items: center;
+    display: flex;
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }
+    @media screen and (min-width: 768px) {
+        margin: -8px;
+    }
 }
 
 .about__product-item {
-    margin-bottom: 0;
+width: 100%;
+@media screen and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: 140px;
+        }
+    }
+@media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 3*8px)/3);
+    margin: 8px;
+}
+
 }
 
 .about__product-list {
     position: relative;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     background-color: var(--product-pink-color);
     border-radius: 24px;
-    padding-bottom: 40px;
+    padding: 160px 53px 40px;
+    @media screen and (min-width: 768px) {
+        padding: 118px 25px 40px;
+    }
 }
 
-.about__product-name {
+.about__product-name::before{
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(/src/images/mobile/mob-icestrawberry-1x.png);
+    width: 280px;
+    height: 280px;
+    position: absolute;
+        bottom: 350px;
+        left: 50%;
+        transform: translateX(-50%);
+        @media screen and (min-width: 768px) {
+        width: 224px;
+            height: 224px;
+            background-image: url(/src/images/tablet/tab-icestrawberry-1x.png);
+            bottom: 390px;
+        }
+}
+
+.about__product-name::after,
+.about__product-name-milk::after,
+.about__product-name-cof::after {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 6px;
+    background-image: url(/src/images/icons/dotwhite.svg), url(/src/images/icons/dotwhite.svg), url(/src/images/icons/dotwhite.svg);
+    background-repeat: no-repeat;
+    background-size: 6px;
+    background-position: 0, center, 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+}
+
+.product-name {
     font-family: 'Titan One';
     font-style: normal;
     font-weight: 400;
@@ -54,16 +124,9 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--primary-white-color);
-    padding: 160px 53px 32px 53px;
-    margin-top: 0;
-}
-
-.about__product-scroll-btn {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 32px;
-    padding: 0;
+   margin-bottom: 32px;
+    
+   
 }
 
 .about__product-offer {
@@ -71,48 +134,101 @@
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 152%;
-    max-width: 206;
+    line-height: 1.5;
+    max-width: 200px;
     text-align: center;
     letter-spacing: 0.04em;
-    margin: 0 40px 32px 40px;
-}
-
-.about__product-dots {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 32px;
-}
-
-.about__product-dots-decor {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: var(--primary-white-color);
-
-    &:not(:last-child) {
-        margin-right: 4px;
+    margin-bottom: 32;
+    @media screen and (min-width: 768px) {
+        line-height: 1.7;
     }
 }
 
-.about__product-list-btn {
-    display: block;
+.about__product-button {
     margin-left: auto;
     margin-right: auto;
+    background-color: var(--primary-white-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color var(--duration) var(--timing-function);
+        justify-content: center;
+        align-items: center;
+        display: flex;
 }
 
-.about__product-thumb {
+.about__product-button:hover,
+.about__product-button:focus {
+    background-color: #ecebeb
+}
+
+.about__product__arrow-icon {
+    width: 10px;
+        height: 10px;
+        fill: var(--dark-pink-color);
+}
+
+.about__product-list-cof {
+    position: relative;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    background-color: var(--product-creamy-color);
+    border-radius: 24px;
+    padding: 160px 53px 40px;
+    @media screen and (min-width: 768px) {
+            padding: 118px 25px 40px;
+        }
+}
+
+.about__product-name-cof::before {
     position: absolute;
-    left: 20px;
-    bottom: 30px;
+    content: "";
+    display: block;
+    background-image: url(/src/images/mobile/mob-icecoffee-1x.png);
     width: 280px;
     height: 280px;
+            bottom: 350px;
+            left: 50%;
+            transform: translateX(-50%);
+            @media screen and (min-width: 768px) {
+                    width: 224px;
+                    height: 224px;
+                    background-image: url(/src/images/tablet/tab-icecoffee-1x.png);
+                    bottom: 390px;
+                }
 }
 
-.about__product-button {
+.about__product-list-milk {
+    position: relative;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    background-color: var(--product-green-color);
+    border-radius: 24px;
+    padding: 160px 53px 40px;
+    @media screen and (min-width: 768px) {
+            padding: 118px 25px 40px;
+        }
+}
+
+.about__product-name-milk::before {
+    position: absolute;
+    content: "";
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--product-pink-color);
-
+    background-image: url(/src/images/mobile/mob-milkshakes-1x.png);
+    width: 280px;
+    height: 280px;
+bottom: 351px;
+    left: 50%;
+    transform: translateX(-50%);
+    @media screen and (min-width: 768px) {
+            width: 224px;
+            height: 224px;
+            background-image: url(/src/images/tablet/tab-milkshakes-1x.png);
+            bottom: 390px;
+        }
 }
+

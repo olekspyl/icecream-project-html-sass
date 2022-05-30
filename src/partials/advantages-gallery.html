@@ -1,23 +1,23 @@
 <!-- advantages section -->
 <section class="section advantages">
   <div class="container container--width">
-    <h2 class="advantages__title visually-hidden">Advantages</h2>
+    <h2 class="advantages__title visually-hidden" id="about">Advantages</h2>
     <ul class="advantages__list">
       <li class="advantages__item">
-        <h3 class="advantages__number">721</h3>
         <p class="advantages__text">
+          <span class="advantages__number">721</span>
           Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
         </p>
       </li>
       <li class="advantages__item">
-        <h3 class="advantages__number">16 kg</h3>
         <p class="advantages__text">
+          <span class="advantages__number">16kg</span>
           Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
         </p>
       </li>
       <li class="advantages__item">
-        <h3 class="advantages__number">84</h3>
         <p class="advantages__text">
+          <span class="advantages__number">84</span>
           Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
         </p>
       </li>
@@ -29,7 +29,7 @@
 <section class="section gallery">
   <div class="container">
     <h2 class="visually-hidden">Gallery</h2>
-    <picture class="gallery__img">
+    <picture>
       <source
         srcset="
           images/desktop/desk-gallery-1x.png 1x,
@@ -51,7 +51,11 @@
         "
         media="(min-width: 320px)"
       />
-      <img src="images/mobile/mob-gallery-1x.png" alt="фото-галерея" />
+      <img
+        class="gallery__img"
+        src="images/mobile/mob-gallery-1x.png"
+        alt="фото-галерея"
+      />
     </picture>
   </div>
 </section>
