@@ -338,8 +338,7 @@ header {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--dark-pink-color);
-  margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 148px;
 }
 
 .about__product-gallery {
@@ -405,14 +404,6 @@ header {
   padding: 160px 53px 32px 53px;
 }
 
-.about__product-scroll-btn {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 32px;
-  padding: 0;
-}
-
 .about__product-offer {
   font-family: "DM Sans";
   font-style: normal;
@@ -422,7 +413,7 @@ header {
   max-width: 200px;
   text-align: center;
   letter-spacing: 0.04em;
-  margin: 0 40px 32px 40px;
+  margin-bottom: 32;
   margin-left: auto;
   margin-right: auto;
 }
@@ -431,7 +422,10 @@ header {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--product-pink-color);
+  background-color: var(--primary-white-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .about__product-list-cof {
