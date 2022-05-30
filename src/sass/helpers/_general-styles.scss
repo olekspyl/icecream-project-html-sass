@@ -16,12 +16,14 @@ html {
 
   @media screen and (min-width: $tablet) {
     width: $tablet;
-    padding-right: 16px;
-    padding-left: 16px;
+    padding-right: 18px;
+    padding-left: 18px;
   }
 
   @media screen and (min-width: $desktop) {
     width: $desktop;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 }
 

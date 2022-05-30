@@ -50,6 +50,11 @@
 
 .advantages__item {
   display: inline-block;
+  transition: transform 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
   &:first-child::before {
     content: url('../images/mobile/mob-udder-bucket-1x.png');
   }
@@ -60,7 +65,9 @@
     content: url('../images/mobile/mob-heart-1x.png');
   }
 
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     &:first-child::before {
       content: '';
       display: block;
@@ -92,6 +99,7 @@
 }
 
 .advantages__number {
+  display: block;
   @extend %secondary-font;
   font-size: 36px;
   font-weight: 400;
@@ -101,10 +109,7 @@
   color: var(--dark-pink-color);
   margin-top: 16px;
   margin-bottom: 16px;
-  transition: transform 250ms var(--timing-function);
-  &:hover {
-    transform: scale(1.1);
-  }
+
   @media screen and (min-width: $tablet) {
     font-size: 48px;
     margin-top: 36px;
@@ -130,8 +135,28 @@
 }
 
 // gallery section styles
-.gallery-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+.gallery {
+  padding-bottom: 40px;
+  background: linear-gradient(
+    180deg,
+    var(--howitsmade-bg-color) 29.5%,
+    var(--primary-white-color) 2%
+  );
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(
+      180deg,
+      var(--howitsmade-bg-color) 34.5%,
+      var(--primary-white-color) 2%
+    );
+  }
+  @media screen and (min-width: $desktop) {
+    background: linear-gradient(
+      180deg,
+      var(--howitsmade-bg-color) 36%,
+      var(--primary-white-color) 2%
+    );
+  }
+}
+.gallery__img {
+  margin: 0 auto;
 }

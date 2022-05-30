@@ -1,0 +1,191 @@
+
+.about__product-name {
+text-align: center;
+}
+
+.products {
+padding-top: 80px;
+    padding-bottom: 40px;
+   
+}
+.about__product {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 148px;
+}
+
+.about__product-pre-title {
+    font-family: 'Titan One';
+    font-size: 18px;
+    line-height: 1.16;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--light-pink-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.about__product-title {
+    font-family: 'Titan One';
+    font-size: 34px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--dark-pink-color);
+    margin-bottom: 148px;
+}
+
+.about__product-gallery {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.about__product-item {
+width: 100%;
+}
+
+.about__product-item:not(:last-child) {
+    margin-bottom: 140px;
+}
+
+.about__product-list {
+    position: relative;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    background-color: var(--product-pink-color);
+    border-radius: 24px;
+    padding: 160px 53px 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.about__product-name::before{
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(/src/images/mobile/mob-icestrawberry-1x.png);
+    width: 280px;
+    height: 280px;
+    position: absolute;
+        bottom: 351px;
+        left: 50%;
+        transform: translateX(-50%);
+}
+
+.about__product-name::after,
+.about__product-name-milk::after,
+.about__product-name-cof::after {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 6px;
+    background-image: url(/src/images/icons/dotwhite.svg), url(/src/images/icons/dotwhite.svg), url(/src/images/icons/dotwhite.svg);
+    background-repeat: no-repeat;
+    background-size: 6px;
+    background-position: 0, center, 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+}
+
+.product-name {
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+   margin-bottom: 32px;
+    
+   
+}
+
+.about__product-offer {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 200px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin-bottom: 32;
+}
+
+.about__product-button {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--primary-white-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color var(--duration) var(--timing-function);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+}
+
+.about__product-button:hover,
+.about__product-button:focus {
+    background-color: #ecebeb
+}
+
+.about__product__arrow-icon {
+    width: 10px;
+        height: 10px;
+        fill: var(--dark-pink-color);
+}
+
+.about__product-list-cof {
+    position: relative;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    background-color: var(--product-creamy-color);
+    border-radius: 24px;
+    padding: 160px 53px 40px;
+}
+
+.about__product-name-cof::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(/src/images/mobile/mob-icecoffee-1x.png);
+    width: 280px;
+    height: 280px;
+            bottom: 351px;
+            left: 50%;
+            transform: translateX(-50%);
+}
+
+.about__product-list-milk {
+    position: relative;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    background-color: var(--product-green-color);
+    border-radius: 24px;
+    padding: 160px 53px 40px;
+}
+
+.about__product-name-milk::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(/src/images/mobile/mob-milkshakes-1x.png);
+    width: 280px;
+    height: 280px;
+bottom: 351px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+

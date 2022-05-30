@@ -61,7 +61,6 @@
   line-height: 1.15;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-
   color: var(--primary-white-color);
   @media screen and (min-width: $tablet) {
     max-width: 162px;
@@ -214,13 +213,11 @@
     line-height: 1.14;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-
     color: var(--dark-pink-color);
 
     .hero__item-numbers:nth-child(1) & {
       text-align: left;
     }
-
     .hero__item-numbers:nth-child(2) & {
       text-align: center;
     }
@@ -260,7 +257,6 @@
     .hero__item-numbers:nth-child(1) & {
       text-align: center;
     }
-
     .hero__item-numbers:nth-child(2) & {
       text-align: left;
     }
@@ -308,7 +304,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     border-radius: 50%;
     background-color: var(--primary-white-color);
     transition: background-color var(--duration) var(--timing-function);
@@ -339,13 +334,39 @@
   position: absolute;
   right: 32px;
   bottom: -158px;
+  transition: transform var(--duration) var(--timing-function),
+  bottom var(--duration) var(--timing-function);
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    bottom: -148px;
+  }
   @media screen and (min-width: $tablet) {
     right: 303px;
-    bottom: -16px;
+    bottom: -16px; 
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      bottom: 1px;
+    }
   }
   @media screen and (min-width: $desktop) {
     right: 408px;
     bottom: -60px;
+    &:hover,
+    &:focus {
+      bottom: -32px;
+    }
+  }
+} 
+
+.hero__milk {
+  @media screen and (min-width: $tablet) {
+    transition: transform var(--duration) var(--timing-function);
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -356,20 +377,19 @@
     right: 32px;
     bottom: -16px;
     display: block;
+    transition: transform var(--duration) var(--timing-function), bottom var(--duration) var(--timing-function);
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      bottom: -9px;
+    } 
   }
   @media screen and (min-width: $desktop) {
     right: 16px;
     bottom: -60px;
+    &:hover,
+    &:focus {
+      bottom: -48px;
+    }
   }
 }
-
-// [data-aos='custom'] {
-//   transform: translateY(100px);
-//   transition-property: transform;
-//   transition-duration: 250ms;
-//   transition-delay: 100;
-// }
-
-// [data-aos='custom'].aos-animate {
-//   transform: translateY(0);
-// }

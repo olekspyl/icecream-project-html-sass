@@ -1,18 +1,86 @@
 header {
+  z-index: 2;
   background-color: var(--product-pink-color);
   padding-top: 8px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 32px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 37px;
+  }
 }
 
 .page-header {
-  display: flex;
-  justify-content: space-between;
+  @include flex(flex, center, space-between);
+  @media screen and (min-width: $tablet) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+.logo {
+  @include flex(flex, center, center);
+}
+
+.logo__text {
+  font-family: 'Titan One';
+  @include font-set(22px, 400, 1.14);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  color: var(--dark-pink-color);
+  margin-left: 20px;
+}
+
+.tablet-menu {
+  @media screen and (min-width: $tablet) {
+    @include flex(flex, center);
+    justify-content: baseline;
+  }
+}
+
+/* ------ Navigation -------*/
+.navigation {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    @include flex(flex, center, center);
+  }
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.navigation__link {
+  padding: 12px 0 12px 0;
+  @include font-set(16px, 700, 1.31);
+  color: var(--primary-white-color);
+
+  transition: color var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--dark-pink-color);
+  }
+
+  &--current {
+    color: var(--dark-pink-color);
+  }
 }
 
 /*  ----- Mobile Menu ----- */
 
 .mobile-menu {
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
@@ -21,17 +89,30 @@ header {
   background-color: var(--mobile-menu-bg-color);
 
   opacity: 1;
-  // transform: translateX(-100%);
-  // transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
-  //   transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(0);
+  transition: opacity var(--duration) var(--timing-function),
+    transform var(--duration) var(--timing-function);
+
+  @media screen and (min-width: $mobile) {
+    width: 250px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 410px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .mobile-menu.is-hidden {
   opacity: 0;
+  transform: translateX(-100%);
   pointer-events: none;
-  // transform: translateX(0);
-  // transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
-  //   transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: opacity var(--duration) var(--timing-function),
+    transform var(--duration) var(--timing-function);
 }
 
 .mobile-menu-container {
@@ -44,16 +125,36 @@ header {
   margin-left: auto;
 }
 
-.button-buy {
+.button--buy {
   width: 209px;
-  margin: 0 20px 20px 20px;
+  margin: 0 auto 20px auto;
 
   transition: background-color var(--duration) var(--timing-function);
+  @media screen and (min-width: $tablet) {
+    width: 186px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-bg-hover-color);
+  }
 }
 
-.button-buy:hover,
-.button-buy:focus {
-  background-color: var(--button-bg-hover-color);
+.button--tablet {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+    width: 160px;
+    margin-left: 32px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 0;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-bg-hover-color);
+  }
 }
 
 .button__icon {
@@ -62,52 +163,58 @@ header {
 .button__text {
   margin-right: 15px;
 }
+.button__text--tablet {
+  margin-right: 8px;
+}
 
 .menu-open-btn,
 .menu-close-btn {
   display: block;
-  background-color: transparent;
   padding: 0;
+  background-color: transparent;
   color: currentColor;
-
   transition: color var(--duration) var(--timing-function);
 }
 
-.menu-open-btn:hover,
-.menu-open-btn:focus {
-  --color2: var(--primary-white-color);
-}
-.menu-close-btn:hover,
-.menu-close-btn:focus {
-  --color1: var(--dark-pink-color);
+.menu-open-btn {
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    --color2: var(--primary-white-color);
+  }
 }
 
 .menu-close-btn {
   margin: 20px 20px 26px auto;
+
+  &:hover,
+  &:focus {
+    --color1: var(--dark-pink-color);
+  }
 }
 
-.icon-menu,
-.icon-cross {
-  color: currentColor;
+// .icon-menu,
+// .icon-cross {
+//   color: currentColor;
+//   transition: color var(--duration) var(--timing-function);
+// }
 
-  transition: color var(--duration) var(--timing-function);
-}
+// .menu-open-btn:hover .icon-menu,
+// .menu-open-btn:focus .icon-menu {
+//   fill: var(--dark-pink-color);
+// }
 
-.menu-open-btn:hover .icon-menu,
-.menu-open-btn:focus .icon-menu {
-  fill: var(--dark-pink-color);
-}
-
-.menu-close-btn:hover .icon-cross,
-.menu-close-btn:focus .icon-cross {
-  fill: var(--dark-pink-color);
-}
+// .menu-close-btn:hover .icon-cross,
+// .menu-close-btn:focus .icon-cross {
+//   fill: var(--dark-pink-color);
+// }
 
 .menu-nav__item {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  padding: 12px 20px 12px 20px;
+  @include flex(flex, center, start);
+
   border: solid var(--mobile-menu-border-color);
   border-width: 1px 0 0 0;
 }
@@ -117,17 +224,17 @@ header {
 }
 
 .menu-nav__link {
+  padding: 12px 20px 12px 20px;
   @include font-set(14px, 700, 1.29);
   color: var(--primary-white-color);
-
   transition: color var(--duration) var(--timing-function);
-}
 
-.menu-nav__link:hover,
-.menu-nav__link:focus {
-  color: var(--dark-pink-color);
-}
+  &:hover,
+  &:focus {
+    color: var(--dark-pink-color);
+  }
 
-.menu-nav__link--current {
-  color: var(--dark-pink-color);
+  &--current {
+    color: var(--dark-pink-color);
+  }
 }
