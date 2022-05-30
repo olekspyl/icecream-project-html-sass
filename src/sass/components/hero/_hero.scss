@@ -334,41 +334,15 @@
   position: absolute;
   right: 32px;
   bottom: -158px;
-  transition: transform var(--duration) var(--timing-function),
-  bottom var(--duration) var(--timing-function);
-  &:hover,
-  &:focus {
-    transform: scale(1.05);
-    bottom: -148px;
-  }
   @media screen and (min-width: $tablet) {
     right: 303px;
     bottom: -16px; 
-    &:hover,
-    &:focus {
-      transform: scale(1.1);
-      bottom: 1px;
-    }
   }
   @media screen and (min-width: $desktop) {
     right: 408px;
     bottom: -60px;
-    &:hover,
-    &:focus {
-      bottom: -32px;
-    }
   }
 } 
-
-.hero__milk {
-  @media screen and (min-width: $tablet) {
-    transition: transform var(--duration) var(--timing-function);
-    &:hover,
-    &:focus {
-      transform: scale(1.1);
-    }
-  }
-}
 
 .hero__tasty {
   display: none;
@@ -377,19 +351,9 @@
     right: 32px;
     bottom: -16px;
     display: block;
-    transition: transform var(--duration) var(--timing-function), bottom var(--duration) var(--timing-function);
-    &:hover,
-    &:focus {
-      transform: scale(1.1);
-      bottom: -9px;
-    } 
   }
   @media screen and (min-width: $desktop) {
     right: 16px;
     bottom: -60px;
-    &:hover,
-    &:focus {
-      bottom: -48px;
-    }
   }
 }
