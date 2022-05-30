@@ -2,11 +2,8 @@
 
 .advantages {
   padding-top: 0;
-  padding-bottom: 80px;
+
   background-color: var(--howitsmade-bg-color);
-  @media screen and (min-width: $desktop) {
-    padding-bottom: 131px;
-  }
 }
 .container--width {
   @media screen and (min-width: $mobile) {
@@ -21,9 +18,7 @@
 }
 .advantages__list {
   text-align: left;
-  @media screen and (max-width: 767.98px) {
-    margin-bottom: -30px;
-  }
+
   @media screen and (min-width: 768px) {
     display: flex;
     margin-left: -60px;
@@ -139,11 +134,27 @@
 
 // gallery section styles
 .gallery {
+  padding-top: 80px;
   background: linear-gradient(
     180deg,
     var(--howitsmade-bg-color) 40%,
     var(--primary-white-color) 40%
   );
+  @media screen and (min-width: $tablet) {
+    padding-top: 126px;
+    background: linear-gradient(
+      180deg,
+      var(--howitsmade-bg-color) 57%,
+      var(--primary-white-color) 40%
+    );
+  }
+  @media screen and (min-width: $desktop) {
+    background: linear-gradient(
+      180deg,
+      var(--howitsmade-bg-color) 52%,
+      var(--primary-white-color) 40%
+    );
+  }
 }
 .gallery-box {
   margin-left: auto;
