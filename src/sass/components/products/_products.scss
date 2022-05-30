@@ -122,9 +122,8 @@ width: 100%;
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    fill: var(--dark-pink-color);
 }
-
-
 
 .about__product-list-cof {
     position: relative;
@@ -145,34 +144,12 @@ width: 100%;
             transform: translateX(-50%);
 }
 
-.about__product-button-cof {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--product-creamy-color);
-}
-
-
 .about__product-list-cof {
     position: relative;
     background-color: var(--product-creamy-color);
     border-radius: 24px;
     padding-bottom: 40px;
 }
-
-.about__product-button-cof {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--product-creamy-color);
-}
-
-
-
-
-
-
-
 
 .about__product-list-milk {
     position: relative;
@@ -192,14 +169,6 @@ bottom: 351px;
     left: 50%;
     transform: translateX(-50%);
 }
-
-.about__product-button-milk {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--product-green-color);
-}
-
 
 .about__product-list-milk {
     position: relative;
