@@ -822,7 +822,7 @@ header {
 }
 @media screen and (min-width: 768px) {
   .about__product-title {
-    margin-bottom: 16px;
+    margin-bottom: 154px;
   }
 }
 
@@ -844,15 +844,15 @@ header {
 .about__product-item {
   width: 100%;
 }
+@media screen and (max-width: 767px) {
+  .about__product-item:not(:last-child) {
+    margin-bottom: 140px;
+  }
+}
 @media screen and (min-width: 768px) {
   .about__product-item {
     flex-basis: calc((100% - 24px) / 3);
     margin: 8px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .about__product-item:not(:last-child) {
-    margin-bottom: 140px;
   }
 }
 
@@ -865,8 +865,11 @@ header {
   background-color: var(--product-pink-color);
   border-radius: 24px;
   padding: 160px 53px 40px;
-  padding-left: 40px;
-  padding-right: 40px;
+}
+@media screen and (min-width: 768px) {
+  .about__product-list {
+    padding: 118px 25px 40px;
+  }
 }
 
 .about__product-name::before {
@@ -877,9 +880,17 @@ header {
   width: 280px;
   height: 280px;
   position: absolute;
-  bottom: 351px;
+  bottom: 350px;
   left: 50%;
   transform: translateX(-50%);
+}
+@media screen and (min-width: 768px) {
+  .about__product-name::before {
+    width: 224px;
+    height: 224px;
+    background-image: url(/src/images/tablet/tab-icestrawberry-1x.png);
+    bottom: 390px;
+  }
 }
 
 .about__product-name::after,
@@ -922,6 +933,11 @@ header {
   letter-spacing: 0.04em;
   margin-bottom: 32;
 }
+@media screen and (min-width: 768px) {
+  .about__product-offer {
+    line-height: 1.7;
+  }
+}
 
 .about__product-button {
   margin-left: auto;
@@ -957,6 +973,11 @@ header {
   border-radius: 24px;
   padding: 160px 53px 40px;
 }
+@media screen and (min-width: 768px) {
+  .about__product-list-cof {
+    padding: 118px 25px 40px;
+  }
+}
 
 .about__product-name-cof::before {
   position: absolute;
@@ -965,9 +986,17 @@ header {
   background-image: url(/src/images/mobile/mob-icecoffee-1x.png);
   width: 280px;
   height: 280px;
-  bottom: 351px;
+  bottom: 350px;
   left: 50%;
   transform: translateX(-50%);
+}
+@media screen and (min-width: 768px) {
+  .about__product-name-cof::before {
+    width: 224px;
+    height: 224px;
+    background-image: url(/src/images/tablet/tab-icecoffee-1x.png);
+    bottom: 390px;
+  }
 }
 
 .about__product-list-milk {
@@ -980,6 +1009,11 @@ header {
   border-radius: 24px;
   padding: 160px 53px 40px;
 }
+@media screen and (min-width: 768px) {
+  .about__product-list-milk {
+    padding: 118px 25px 40px;
+  }
+}
 
 .about__product-name-milk::before {
   position: absolute;
@@ -991,6 +1025,14 @@ header {
   bottom: 351px;
   left: 50%;
   transform: translateX(-50%);
+}
+@media screen and (min-width: 768px) {
+  .about__product-name-milk::before {
+    width: 224px;
+    height: 224px;
+    background-image: url(/src/images/tablet/tab-milkshakes-1x.png);
+    bottom: 390px;
+  }
 }
 
 p {
