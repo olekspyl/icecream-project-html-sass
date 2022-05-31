@@ -260,6 +260,7 @@ p {
     background-color: rgba(0, 0, 0, 0.2);
     top: 0;
     left: 0;
+    
 }
 
 .about-modal {
@@ -286,6 +287,9 @@ p {
     display: none;
 }
 }
+ @media screen and (max-width: $tablet) {
+     .about-modal__text__another{display: none;}
+    }
 
 }
 .about-modal__text{
