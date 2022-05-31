@@ -32,7 +32,7 @@ p {
 
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width: $desktop) {
     .about {
         background-image: url(..//images/desktop/desk-bcg-milk-1x.png);
         background-repeat: no-repeat;
