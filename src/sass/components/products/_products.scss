@@ -1,18 +1,19 @@
-
 .about__product-name {
-text-align: center;
+    text-align: center;
 }
 
 .products {
-padding-top: 80px;
+    padding-top: 80px;
     padding-bottom: 40px;
+
     @media screen and (min-width: 768px) {
         padding-top: 40px;
         padding-bottom: 60px;
     }
-        @media screen and (min-width: 1280px) {
-            padding-top: 60px;
-        }
+
+    @media screen and (min-width: 1280px) {
+        padding-top: 60px;
+    }
 }
 
 .about__product-pre-title {
@@ -24,16 +25,18 @@ padding-top: 80px;
     color: var(--light-pink-color);
     margin-top: 0;
     margin-bottom: 15px;
+
     @media screen and (min-width: 768px) {
-            font-size: 26px;
-            line-height: 1.15;
-margin-bottom: 18px;
+        font-size: 26px;
+        line-height: 1.15;
+        margin-bottom: 18px;
     }
-        @media screen and (min-width: 1280px) {
-            margin-bottom: 16px;
-            font-size: 30px;
-                line-height: 1.13;
-        }
+
+    @media screen and (min-width: 1280px) {
+        margin-bottom: 16px;
+        font-size: 30px;
+        line-height: 1.13;
+    }
 }
 
 .about__product-title {
@@ -45,70 +48,80 @@ margin-bottom: 18px;
     text-transform: uppercase;
     color: var(--dark-pink-color);
     margin-bottom: 148px;
+
     @media screen and (min-width: 768px) {
-            font-size: 48px;
-            line-height: 1.14;
+        font-size: 48px;
+        line-height: 1.14;
         margin-bottom: 154px;
     }
+
     @media screen and (min-width: 1280px) {
         font-size: 58px;
-            line-height: 66px;
-            letter-spacing: 1.13;
+        line-height: 66px;
+        letter-spacing: 1.13;
         margin-bottom: 258px;
     }
-    
+
 }
 
 .about__product-gallery {
     align-items: center;
     display: flex;
+
     @media screen and (max-width: 767px) {
         flex-direction: column;
     }
+
     @media screen and (min-width: 768px) {
         margin: -8px;
     }
-        @media screen and (min-width: 1280px) {
-            margin: -16px;
-        }
+
+    @media screen and (min-width: 1280px) {
+        margin: -16px;
+    }
 }
 
 .about__product-item {
-width: 100%;
-@media screen and (max-width: 767px) {
+    width: 100%;
+
+    @media screen and (max-width: 767px) {
         &:not(:last-child) {
             margin-bottom: 140px;
         }
     }
-@media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 6*8px)/3);
-    margin: 8px;
-}
-@media screen and (min-width: 1280px) {
-    flex-basis: calc((100% - 6*16px)/3);
-margin: 16px;
-}
+
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 6*8px)/3);
+        margin: 8px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        flex-basis: calc((100% - 6*16px)/3);
+        margin: 16px;
+    }
 
 }
 
 .about__product-list {
     position: relative;
     display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--product-pink-color);
     border-radius: 24px;
     padding: 160px 40px 40px;
+
     @media screen and (min-width: 768px) {
         padding: 118px 25px 40px;
     }
-        @media screen and (min-width: 1280px) {
+
+    @media screen and (min-width: 1280px) {
         padding: 165px 75px 60px 75px;
-        }
+    }
 }
 
-.about__product-name::before{
+.about__product-name::before {
     position: absolute;
     content: "";
     display: block;
@@ -116,27 +129,25 @@ margin: 16px;
     width: 280px;
     height: 280px;
     position: absolute;
-        bottom: 350px;
-        left: 50%;
-        transform: translateX(-50%);
-        transform: scale 1.0;
-        @media screen and (min-width: 768px) {
+    bottom: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media screen and (min-width: 768px) {
         width: 224px;
-            height: 224px;
-            background-image: url(/src/images/tablet/tab-icestrawberry-1x.png);
-            bottom: 390px;
-        }
-                @media screen and (min-width: 1280px) {
-                    width: 394px;
-                        height: 394px;
-                        background-image: url(/src/images/desktop/desk-icestrawberry-1x.png);
-                        bottom: 400px;
-                }
-                        transition: transform var(--duration) var(--timing-function);
+        height: 224px;
+        background-image: url(/src/images/tablet/tab-icestrawberry-1x.png);
+        bottom: 390px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 394px;
+        height: 394px;
+        background-image: url(/src/images/desktop/desk-icestrawberry-1x.png);
+        bottom: 400px;
+    }
 
 }
-
-
 
 .about__product-name::after,
 .about__product-name-milk::after,
@@ -164,10 +175,11 @@ margin: 16px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--primary-white-color);
-   margin-bottom: 32px;
+    margin-bottom: 32px;
+
     @media screen and (min-width: 1280px) {
-font-size: 30px;
-    line-height: 1.13;
+        font-size: 30px;
+        line-height: 1.13;
     }
 }
 
@@ -181,51 +193,37 @@ font-size: 30px;
     letter-spacing: 0.04em;
     margin-bottom: 32;
     color: var(--primary-white-color);
+
     @media screen and (min-width: 768px) {
         line-height: 1.7;
         max-width: 160px;
     }
-        @media screen and (min-width: 1280px) {
-            font-size: 16px;
-                line-height: 1.75;
-                margin-bottom: 60px;
-                max-width: 245px;
-        }
-}
 
-.about__product-button {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--primary-white-color);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: background-color var(--duration) var(--timing-function);
-        justify-content: center;
-        align-items: center;
-        display: flex;
-}
-
-.about__product-button:hover,
-.about__product-button:focus {
-    background-color: #ecebeb
+    @media screen and (min-width: 1280px) {
+        font-size: 16px;
+        line-height: 1.75;
+        margin-bottom: 60px;
+        max-width: 245px;
+    }
 }
 
 .about__product-list-cof {
     position: relative;
     display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--product-creamy-color);
     border-radius: 24px;
     padding: 160px 40px 40px;
+
     @media screen and (min-width: 768px) {
-            padding: 118px 25px 40px;
-        }
-                 @media screen and (min-width: 1280px) {
-                     padding: 165px 75px 60px 75px;
-                 }
+        padding: 118px 25px 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding: 165px 75px 60px 75px;
+    }
 }
 
 .about__product-name-cof::before {
@@ -235,38 +233,42 @@ font-size: 30px;
     background-image: url(/src/images/mobile/mob-icecoffee-1x.png);
     width: 280px;
     height: 280px;
-            bottom: 350px;
-            left: 50%;
-            transform: translateX(-50%);
-            @media screen and (min-width: 768px) {
-                    width: 224px;
-                    height: 224px;
-                    background-image: url(/src/images/tablet/tab-icecoffee-1x.png);
-                    bottom: 390px;
-                }
-                                 @media screen and (min-width: 1280px) {
-                                     width: 394px;
-                                     height: 394px;
-                                     background-image: url(/src/images/desktop/desk-icecoffee-1x.png);
-                                     bottom: 400px;
-                                 }
+    bottom: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media screen and (min-width: 768px) {
+        width: 224px;
+        height: 224px;
+        background-image: url(/src/images/tablet/tab-icecoffee-1x.png);
+        bottom: 390px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 394px;
+        height: 394px;
+        background-image: url(/src/images/desktop/desk-icecoffee-1x.png);
+        bottom: 400px;
+    }
 }
 
 .about__product-list-milk {
     position: relative;
     display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--product-green-color);
     border-radius: 24px;
     padding: 160px 40px 40px;
+
     @media screen and (min-width: 768px) {
-            padding: 118px 25px 40px;
-        }
-                 @media screen and (min-width: 1280px) {
-                    padding: 165px 75px 60px 75px;
-                 }
+        padding: 118px 25px 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding: 165px 75px 60px 75px;
+    }
 }
 
 .about__product-name-milk::before {
@@ -276,21 +278,23 @@ font-size: 30px;
     background-image: url(/src/images/mobile/mob-milkshakes-1x.png);
     width: 280px;
     height: 280px;
-bottom: 351px;
+    bottom: 351px;
     left: 50%;
     transform: translateX(-50%);
+
     @media screen and (min-width: 768px) {
-            width: 224px;
-            height: 224px;
-            background-image: url(/src/images/tablet/tab-milkshakes-1x.png);
-            bottom: 390px;
-        }
-                @media screen and (min-width: 1280px) {
-                    width: 394px;
-                    height: 394px;
-                    background-image: url(/src/images/desktop/desk-milkshake-1x.png);
-                    bottom: 400px;
-                }
+        width: 224px;
+        height: 224px;
+        background-image: url(/src/images/tablet/tab-milkshakes-1x.png);
+        bottom: 390px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 394px;
+        height: 394px;
+        background-image: url(/src/images/desktop/desk-milkshake-1x.png);
+        bottom: 400px;
+    }
 }
 
 .short-text {
@@ -299,22 +303,12 @@ bottom: 351px;
     }
 }
 
-
-
-
-
-
-.about__product-text {
-    position: relative;
-    overflow: hidden;
-}
-
-.about__product-overlay {
-position: absolute;
-height: 100%;
-top: 0%;
-left: 0;
-background-color: rgba(231, 93, 139, 0.565);
+.about__product-overlay-cream,
+.about__product-overlay-coff,
+.about__product-overlay-milk {
+    position: absolute;
+    top: -60px;
+    height: 100%;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.5;
@@ -322,22 +316,58 @@ background-color: rgba(231, 93, 139, 0.565);
     letter-spacing: 0.04em;
     padding: 40px;
     border-radius: 24px;
-    transform: translateY(100%);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     transition: transform var(--duration) var(--timing-function);
 
+    @media screen and (min-width: 768px) {
+        padding: 30px;
+    }
 }
 
-.about__product__arrow-icon:checked .about__product-overlay {
-transform: translateY(0);
+.about__product-text {
+    position: relative;
+}
+
+.about__product-overlay-cream {
+    background-color: var(--mobile-menu-border-color);
+}
+
+.about__product-overlay-milk {
+    background-color: #b4e673;
+}
+
+.about__product-overlay-coff {
+    background-color: #eec388;
+}
+
+.about__product-detalis[open] .about__product__arrow-icon {
+    transform: rotate(-90deg);
+    transition: transform var(--duration) var(--timing-function);
+}
+
+.summary-btn {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--primary-white-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color var(--duration) var(--timing-function);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    &:hover,
+    &:focus {
+        background-color: #ecebeb;
+    }
 }
 
 .about__product__arrow-icon {
+    fill: var(--dark-pink-color);
     width: 15px;
     height: 15px;
-    fill: var(--dark-pink-color);
-    transform: rotate var(--duration) var(--timing-function);
-    &:hover,
-        &:focus {
-            transform: rotate(-90deg);
-        }
+    transition: transform var(--duration) var(--timing-function);
 }
