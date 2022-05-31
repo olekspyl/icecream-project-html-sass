@@ -243,10 +243,24 @@ header {
   margin-bottom: 20px;
   margin-right: 20px;
   margin-left: auto;
-  width: 200px;
-  height: 50px;
+  width: 210px;
+  height: 55px;
 }
 
-// .logo-menu {
-//   animation: turn 360;
-// }
+.logo-menu {
+  animation: turn 360;
+  animation-name: rotateY;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  @keyframes rotateY {
+    0% {
+      transform: perspective(400px) rotateY(0deg);
+    }
+
+    100% {
+      transform: perspective(400px) rotateY(360deg);
+    }
+  }
+}
