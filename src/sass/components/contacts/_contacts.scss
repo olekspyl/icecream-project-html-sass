@@ -221,6 +221,8 @@
 }
 
 .modal-contacts {
+    padding-left: 10px;
+    padding-right: 10px;
     position: absolute;
     overflow: hidden;
     top: 50%;
@@ -295,10 +297,6 @@
 .map {
     width: 100%;
     height: 80%;
+    border-radius: 6px;
 }
 
-.map-subtitle {
-    color: var(--dark-pink-color);
-    font-size: 36px;
-    text-align: center;
-}
