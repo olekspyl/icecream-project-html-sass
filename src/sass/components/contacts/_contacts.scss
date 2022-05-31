@@ -6,7 +6,7 @@
             padding-bottom: 20px;
         }
     
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: $desktop) {
             padding-top: 60px;
             padding-bottom: 60px;
         }
@@ -20,7 +20,7 @@
             var(--howitsmade-bg-color) 22%
     ); 
         }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         background-image: linear-gradient(
             var(--primary-white-color) 20%,
             var(--howitsmade-bg-color) 20%
@@ -70,7 +70,7 @@
         height: 28px;
         width: 73px;
         }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         width: 75px;
         }
 }
@@ -91,7 +91,7 @@
     @media screen and (min-width: 768px) {
             font-size: 14px;
         }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
             font-size: 16px;
         }
 }
@@ -106,7 +106,7 @@
         font-size: 14px;
         line-height: 1.66;
         }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
             font-size: 16px;
             line-height: 1.83;
         }
@@ -128,7 +128,7 @@
     @media screen and (min-width: 768px) {
             font-size: 14px;
         }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
             font-size: 16px;
         }
 }
@@ -140,7 +140,7 @@
     @media screen and (min-width: 768px) {
             font-size: 14px;
         }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
             font-size: 16px;
         }
 }
@@ -154,7 +154,7 @@
             font-size: 14px;
             line-height: 1.83;
         }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
             font-size: 16px;
         }
         &:hover,
@@ -199,7 +199,7 @@
             display: flex;
             margin-top: 40px;
         }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
             margin-top: 60px;
         }
 }
@@ -241,7 +241,7 @@
             width: 65vw;
             height: 65vw;
         }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
             width: 50vw;
             height: 50vw;
         }
