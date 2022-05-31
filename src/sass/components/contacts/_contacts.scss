@@ -221,6 +221,8 @@
 }
 
 .modal-contacts {
+    padding-left: 10px;
+    padding-right: 10px;
     position: absolute;
     overflow: hidden;
     top: 50%;
@@ -294,5 +296,19 @@
 }
 .map {
     width: 100%;
-    height: 90%;
+    height: 82%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.map-subtitle {
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 34px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--dark-pink-color);
 }
