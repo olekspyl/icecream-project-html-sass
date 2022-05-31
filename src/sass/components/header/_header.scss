@@ -93,8 +93,8 @@ header {
 
   opacity: 1;
   transform: translateX(0);
-  transition: opacity var(--duration) var(--timing-function),
-    transform var(--duration) var(--timing-function);
+  transition: opacity 500ms var(--timing-function),
+    transform 500ms var(--timing-function);
 
   @media screen and (min-width: $mobile) {
     width: 250px;
@@ -113,9 +113,10 @@ header {
   opacity: 0;
   transform: translateX(-100%);
   pointer-events: none;
-
-  transition: opacity var(--duration) var(--timing-function),
-    transform var(--duration) var(--timing-function);
+  visibility: hidden;
+  transition: opacity 500ms var(--timing-function),
+    transform 500ms var(--timing-function),
+    visibility 500ms var(--timing-function);
 }
 
 .mobile-menu-container {
@@ -184,36 +185,36 @@ header {
     display: none;
   }
 
-  &:hover,
-  &:focus {
-    --color2: var(--primary-white-color);
-  }
+  // &:hover,
+  // &:focus {
+  //   --color2: var(--primary-white-color);
+  // }
 }
 
 .menu-close-btn {
   margin: 20px 20px 26px auto;
 
-  &:hover,
-  &:focus {
-    --color1: var(--dark-pink-color);
-  }
+  // &:hover,
+  // &:focus {
+  //   --color1: var(--dark-pink-color);
+  // }
 }
 
-// .icon-menu,
-// .icon-cross {
-//   color: currentColor;
-//   transition: color var(--duration) var(--timing-function);
-// }
+.icon-menu,
+.icon-cross {
+  color: currentColor;
+  transition: color 2s var(--timing-function), fill 2s var(--timing-function);
+}
 
-// .menu-open-btn:hover .icon-menu,
-// .menu-open-btn:focus .icon-menu {
-//   fill: var(--dark-pink-color);
-// }
+.menu-open-btn:hover .icon-menu,
+.menu-open-btn:focus .icon-menu {
+  --color2: var(--primary-white-color);
+}
 
-// .menu-close-btn:hover .icon-cross,
-// .menu-close-btn:focus .icon-cross {
-//   fill: var(--dark-pink-color);
-// }
+.menu-close-btn:hover .icon-cross,
+.menu-close-btn:focus .icon-cross {
+  --color1: var(--dark-pink-color);
+}
 
 .menu-nav__item {
   @include flex(flex, center, start);
