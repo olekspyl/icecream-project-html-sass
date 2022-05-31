@@ -846,7 +846,7 @@ header {
     padding-bottom: 60px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .products {
     padding-top: 60px;
   }
@@ -869,7 +869,7 @@ header {
     margin-bottom: 18px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .about__product-pre-title {
     margin-bottom: 16px;
     font-size: 30px;
@@ -894,7 +894,7 @@ header {
     margin-bottom: 154px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .about__product-title {
     font-size: 58px;
     line-height: 66px;
@@ -917,7 +917,7 @@ header {
     margin: -8px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .about__product-gallery {
     margin: -16px;
   }
@@ -937,7 +937,7 @@ header {
     margin: 8px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .about__product-item {
     flex-basis: calc((100% - 96px) / 3);
     margin: 16px;
@@ -959,7 +959,7 @@ header {
     padding: 118px 25px 40px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .about__product-list {
     padding: 165px 75px 60px 75px;
   }
@@ -976,6 +976,7 @@ header {
   bottom: 350px;
   left: 50%;
   transform: translateX(-50%);
+  transform: scale 1;
   transition: transform var(--duration) var(--timing-function);
 }
 @media screen and (min-width: 768px) {
@@ -986,7 +987,7 @@ header {
     bottom: 390px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .about__product-name::before {
     width: 394px;
     height: 394px;
@@ -994,9 +995,7 @@ header {
     bottom: 400px;
   }
 }
-
-.about__product-name:hover::before,
-.about__product-name:focus::before {
+.about__product-name::before:hover, .about__product-name::before:focus {
   transform: scale(1.1);
 }
 
@@ -1028,7 +1027,7 @@ header {
   color: var(--primary-white-color);
   margin-bottom: 32px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .product-name {
     font-size: 30px;
     line-height: 1.13;
@@ -1052,7 +1051,7 @@ header {
     max-width: 160px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .about__product-offer {
     font-size: 16px;
     line-height: 1.75;
@@ -1079,12 +1078,6 @@ header {
   background-color: #ecebeb;
 }
 
-.about__product__arrow-icon {
-  width: 10px;
-  height: 10px;
-  fill: var(--dark-pink-color);
-}
-
 .about__product-list-cof {
   position: relative;
   display: flex;
@@ -1100,7 +1093,7 @@ header {
     padding: 118px 25px 40px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .about__product-list-cof {
     padding: 165px 75px 60px 75px;
   }
@@ -1125,7 +1118,7 @@ header {
     bottom: 390px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .about__product-name-cof::before {
     width: 394px;
     height: 394px;
@@ -1149,7 +1142,7 @@ header {
     padding: 118px 25px 40px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .about__product-list-milk {
     padding: 165px 75px 60px 75px;
   }
@@ -1174,7 +1167,7 @@ header {
     bottom: 390px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .about__product-name-milk::before {
     width: 394px;
     height: 394px;
@@ -1187,6 +1180,42 @@ header {
   .short-text {
     display: none;
   }
+}
+
+.about__product-text {
+  position: relative;
+  overflow: hidden;
+}
+
+.about__product-overlay {
+  position: absolute;
+  height: 100%;
+  top: 0%;
+  left: 0;
+  background-color: rgba(231, 93, 139, 0.565);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  padding: 40px;
+  border-radius: 24px;
+  transform: translateY(100%);
+  transition: transform var(--duration) var(--timing-function);
+}
+
+.about__product__arrow-icon:checked .about__product-overlay {
+  transform: translateY(0);
+}
+
+.about__product__arrow-icon {
+  width: 15px;
+  height: 15px;
+  fill: var(--dark-pink-color);
+  transform: rotate var(--duration) var(--timing-function);
+}
+.about__product__arrow-icon:hover, .about__product__arrow-icon:focus {
+  transform: rotate(-90deg);
 }
 
 p {
