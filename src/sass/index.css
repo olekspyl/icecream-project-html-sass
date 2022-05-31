@@ -995,7 +995,8 @@ header {
     bottom: 400px;
   }
 }
-.about__product-name::before:hover, .about__product-name::before:focus {
+.about__product-name::before .about__product-name:hover::before,
+.about__product-name::before .about__product-name:focus::before {
   transform: scale(1.1);
 }
 
