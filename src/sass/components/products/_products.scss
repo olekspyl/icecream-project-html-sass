@@ -6,12 +6,13 @@ text-align: center;
 .products {
 padding-top: 80px;
     padding-bottom: 40px;
-   
-}
-.about__product {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 148px;
+    @media screen and (min-width: 768px) {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+        @media screen and (min-width: 1280px) {
+            padding-top: 60px;
+        }
 }
 
 .about__product-pre-title {
@@ -23,6 +24,16 @@ padding-top: 80px;
     color: var(--light-pink-color);
     margin-top: 0;
     margin-bottom: 15px;
+    @media screen and (min-width: 768px) {
+            font-size: 26px;
+            line-height: 1.15;
+margin-bottom: 18px;
+    }
+        @media screen and (min-width: 1280px) {
+            margin-bottom: 16px;
+            font-size: 30px;
+                line-height: 1.13;
+        }
 }
 
 .about__product-title {
@@ -35,7 +46,15 @@ padding-top: 80px;
     color: var(--dark-pink-color);
     margin-bottom: 148px;
     @media screen and (min-width: 768px) {
+            font-size: 48px;
+            line-height: 1.14;
         margin-bottom: 154px;
+    }
+    @media screen and (min-width: 1280px) {
+        font-size: 58px;
+            line-height: 66px;
+            letter-spacing: 1.13;
+        margin-bottom: 258px;
     }
     
 }
@@ -49,6 +68,9 @@ padding-top: 80px;
     @media screen and (min-width: 768px) {
         margin: -8px;
     }
+        @media screen and (min-width: 1280px) {
+            margin: -16px;
+        }
 }
 
 .about__product-item {
@@ -59,8 +81,12 @@ width: 100%;
         }
     }
 @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 3*8px)/3);
+    flex-basis: calc((100% - 6*8px)/3);
     margin: 8px;
+}
+@media screen and (min-width: 1280px) {
+    flex-basis: calc((100% - 6*16px)/3);
+margin: 16px;
 }
 
 }
@@ -73,10 +99,13 @@ width: 100%;
         align-items: center;
     background-color: var(--product-pink-color);
     border-radius: 24px;
-    padding: 160px 53px 40px;
+    padding: 160px 40px 40px;
     @media screen and (min-width: 768px) {
         padding: 118px 25px 40px;
     }
+        @media screen and (min-width: 1280px) {
+        padding: 165px 75px 60px 75px;
+        }
 }
 
 .about__product-name::before{
@@ -90,13 +119,26 @@ width: 100%;
         bottom: 350px;
         left: 50%;
         transform: translateX(-50%);
+        transform: scale 1.0;
         @media screen and (min-width: 768px) {
         width: 224px;
             height: 224px;
             background-image: url(/src/images/tablet/tab-icestrawberry-1x.png);
             bottom: 390px;
         }
+                @media screen and (min-width: 1280px) {
+                    width: 394px;
+                        height: 394px;
+                        background-image: url(/src/images/desktop/desk-icestrawberry-1x.png);
+                        bottom: 400px;
+                }
+                        transition: transform var(--duration) var(--timing-function);
+                                                &:hover,
+                                                &:focus {
+                                                    transform: scale(1.1);
+                                                }
 }
+
 
 .about__product-name::after,
 .about__product-name-milk::after,
@@ -125,13 +167,14 @@ width: 100%;
     text-transform: uppercase;
     color: var(--primary-white-color);
    margin-bottom: 32px;
-    
-   
+    @media screen and (min-width: 1280px) {
+font-size: 30px;
+    line-height: 1.13;
+    }
 }
 
 .about__product-offer {
     font-family: 'DM Sans';
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.5;
@@ -139,9 +182,17 @@ width: 100%;
     text-align: center;
     letter-spacing: 0.04em;
     margin-bottom: 32;
+    color: var(--primary-white-color);
     @media screen and (min-width: 768px) {
         line-height: 1.7;
+        max-width: 160px;
     }
+        @media screen and (min-width: 1280px) {
+            font-size: 16px;
+                line-height: 1.75;
+                margin-bottom: 60px;
+                max-width: 245px;
+        }
 }
 
 .about__product-button {
@@ -162,11 +213,7 @@ width: 100%;
     background-color: #ecebeb
 }
 
-.about__product__arrow-icon {
-    width: 10px;
-        height: 10px;
-        fill: var(--dark-pink-color);
-}
+
 
 .about__product-list-cof {
     position: relative;
@@ -176,10 +223,13 @@ width: 100%;
         align-items: center;
     background-color: var(--product-creamy-color);
     border-radius: 24px;
-    padding: 160px 53px 40px;
+    padding: 160px 40px 40px;
     @media screen and (min-width: 768px) {
             padding: 118px 25px 40px;
         }
+                 @media screen and (min-width: 1280px) {
+                     padding: 165px 75px 60px 75px;
+                 }
 }
 
 .about__product-name-cof::before {
@@ -198,6 +248,12 @@ width: 100%;
                     background-image: url(/src/images/tablet/tab-icecoffee-1x.png);
                     bottom: 390px;
                 }
+                                 @media screen and (min-width: 1280px) {
+                                     width: 394px;
+                                     height: 394px;
+                                     background-image: url(/src/images/desktop/desk-icecoffee-1x.png);
+                                     bottom: 400px;
+                                 }
 }
 
 .about__product-list-milk {
@@ -208,10 +264,13 @@ width: 100%;
         align-items: center;
     background-color: var(--product-green-color);
     border-radius: 24px;
-    padding: 160px 53px 40px;
+    padding: 160px 40px 40px;
     @media screen and (min-width: 768px) {
             padding: 118px 25px 40px;
         }
+                 @media screen and (min-width: 1280px) {
+                    padding: 165px 75px 60px 75px;
+                 }
 }
 
 .about__product-name-milk::before {
@@ -230,5 +289,58 @@ bottom: 351px;
             background-image: url(/src/images/tablet/tab-milkshakes-1x.png);
             bottom: 390px;
         }
+                @media screen and (min-width: 1280px) {
+                    width: 394px;
+                    height: 394px;
+                    background-image: url(/src/images/desktop/desk-milkshake-1x.png);
+                    bottom: 400px;
+                }
 }
 
+.short-text {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+
+
+.about__product-text {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.about__product-overlay {
+position: absolute;
+height: 100%;
+top: 0%;
+left: 0;
+background-color: rgba(231, 93, 139, 0.565);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.04em;
+    padding: 40px;
+    border-radius: 24px;
+    transform: translateY(100%);
+    transition: transform var(--duration) var(--timing-function);
+
+}
+
+.about__product__arrow-icon:checked .about__product-overlay {
+transform: translateY(0);
+}
+
+.about__product__arrow-icon {
+    width: 15px;
+    height: 15px;
+    fill: var(--dark-pink-color);
+    transform: rotate var(--duration) var(--timing-function);
+    &:hover,
+        &:focus {
+            transform: rotate(-90deg);
+        }
+}
