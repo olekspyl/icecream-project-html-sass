@@ -36,6 +36,8 @@
   border-radius: 50%;
   position: absolute;
 
+  animation: emergenceTop 600ms ease;
+
   @media screen and (min-width: $tablet) {
     width: 335px;
     height: 335px;
@@ -97,6 +99,7 @@
   position: relative;
 
   display: flex;
+  width: max-content;
   z-index: 1;
   @media screen and (min-width: $tablet) {
     margin-bottom: 20px;
@@ -183,6 +186,8 @@
 
     display: flex;
     flex-direction: column;
+
+    animation: emergenceRight 700ms ease;
 
     &:not(:last-child) {
       margin-bottom: 15px;
@@ -274,6 +279,7 @@
     z-index: 1;
     display: flex;
     align-items: center;
+    width: max-content;
   }
 }
 
@@ -330,24 +336,26 @@
   }
 }
 
+.hero__hidden-wrapper {
+  overflow: hidden;
+}
+
 .hero__icecream {
   position: absolute;
   right: 32px;
   bottom: -158px;
-  transition: transform var(--duration) var(--timing-function),
-  bottom var(--duration) var(--timing-function);
+  animation: emergenceBottom 800ms ease;
+  transition: transform var(--duration) var(--timing-function);
   &:hover,
   &:focus {
-    transform: scale(1.05);
-    bottom: -148px;
+    transform: scale(1.05) translateY(-10px);
   }
   @media screen and (min-width: $tablet) {
     right: 303px;
     bottom: -16px; 
     &:hover,
     &:focus {
-      transform: scale(1.1);
-      bottom: 1px;
+      transform: scale(1.1) translateY(-16px);
     }
   }
   @media screen and (min-width: $desktop) {
@@ -355,18 +363,18 @@
     bottom: -60px;
     &:hover,
     &:focus {
-      bottom: -32px;
+      transform: scale(1.1) translateY(-26px);
     }
   }
 } 
 
 .hero__milk {
-  @media screen and (min-width: $tablet) {
-    transition: transform var(--duration) var(--timing-function);
-    &:hover,
-    &:focus {
-      transform: scale(1.1);
-    }
+  animation: emergenceLeft 900ms ease;
+  transition: transform var(--duration) var(--timing-function);
+  
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
   }
 }
 
@@ -377,19 +385,68 @@
     right: 32px;
     bottom: -16px;
     display: block;
-    transition: transform var(--duration) var(--timing-function), bottom var(--duration) var(--timing-function);
+    animation: emergenceRight 1000ms ease;
+    transition: transform var(--duration) var(--timing-function);
     &:hover,
     &:focus {
-      transform: scale(1.1);
-      bottom: -9px;
-    } 
+      transform: scale(1.1) translateY(-7px);
+    }
   }
   @media screen and (min-width: $desktop) {
     right: 16px;
     bottom: -60px;
     &:hover,
     &:focus {
-      bottom: -48px;
+      transform: scale(1.1) translateY(-11px);
     }
   }
 }
+
+@keyframes emergenceRight {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes emergenceBottom {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes emergenceLeft {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes emergenceTop {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
