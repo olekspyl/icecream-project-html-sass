@@ -176,44 +176,36 @@ header {
   display: block;
   padding: 0;
   background-color: transparent;
-  color: currentColor;
-  transition: color var(--duration) var(--timing-function);
 }
 
 .menu-open-btn {
   @media screen and (min-width: $desktop) {
     display: none;
   }
-
-  // &:hover,
-  // &:focus {
-  //   --color2: var(--primary-white-color);
-  // }
 }
 
 .menu-close-btn {
   margin: 20px 20px 26px auto;
-
-  // &:hover,
-  // &:focus {
-  //   --color1: var(--dark-pink-color);
-  // }
 }
 
-.icon-menu,
+.icon-menu {
+  stroke: var(--dark-pink-color);
+  transition: stroke var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    stroke: var(--primary-white-color);
+  }
+}
+
 .icon-cross {
-  color: currentColor;
-  transition: color 2s var(--timing-function), fill 2s var(--timing-function);
-}
+  stroke: var(--primary-white-color);
+  transition: stroke var(--duration) var(--timing-function);
 
-.menu-open-btn:hover .icon-menu,
-.menu-open-btn:focus .icon-menu {
-  --color2: var(--primary-white-color);
-}
-
-.menu-close-btn:hover .icon-cross,
-.menu-close-btn:focus .icon-cross {
-  --color1: var(--dark-pink-color);
+  &:hover,
+  &:focus {
+    stroke: var(--dark-pink-color);
+  }
 }
 
 .menu-nav__item {
