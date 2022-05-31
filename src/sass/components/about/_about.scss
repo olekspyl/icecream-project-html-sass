@@ -11,12 +11,42 @@ p {
         @media screen and (max-width: $tablet) {
             padding-top: 40px;}
         @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding-top: 20px;  }
+        padding-top: 20px;  }
          @media screen and (min-width: $desktop) {
              padding-top: 60px;
             padding-bottom: 60px;
          }
 }
+.about {
+    @media screen and (max-width:767px) {
+        background-image: url(..//images/mobile/mob-bcg-milk-1x.png);
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: contain;}
+    @media screen and (max-width:479px) {
+        background-position: 0% 72%;
+    }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        background-position: 50% 70%;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+    .about {
+        background-image: url(..//images/desktop/desk-bcg-milk-1x.png);
+        background-repeat: no-repeat;
+        background-position: 50% 90%;
+        @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution:192dpi),
+        (min-resolution:2dppx) {
+            .about {
+     background-image: url(..//images/desktop/desk-bcg-milk-2x.png);
+            }
+        }
+    }
+}
+
 .about-title{
     @media screen and (max-width:$tablet ){
     margin-bottom: 32px}  
@@ -31,7 +61,6 @@ p {
         line-height: 1.16;
         text-align: center;
         text-transform: uppercase;
-        
         margin-bottom: 15px;
 
     color: var(--light-pink-color);
@@ -51,40 +80,6 @@ p {
 
 }
 
-.about{
-    @media screen and (max-width:767px){
-    background-image: url(..//images/mobile/mob-bcg-milk-1x.png);
-    background-repeat: no-repeat;
-    background-attachment:scroll;
-    background-size: contain;
-   
-}
- @media screen and (max-width:479px) {
-     background-position: 0% 72% ;
- }
- @media screen and (min-width: 480px) and (max-width: 767px) {
-     background-position: 50% 70%;
- }
-
-}
-
-@media screen and (min-width:1200px) {
-    .about{
-        
-  background-image: url(..//images/desktop/desk-bcg-milk-1x.png);
-  background-repeat: no-repeat;
-    background-position: 50% 90% ;
-                
-    @media screen and (min-device-pixel-ratio: 2),
-  (min-resolution:192dpi),
-   (min-resolution:2dppx) {
-      
-    .about {
-      background-image: url(..//images/desktop/desk-bcg-milk-2x.png);
-                        }
-   }
- }
- }
 
 .about-name {
          @extend %secondary-font;
@@ -97,19 +92,15 @@ p {
         text-transform: uppercase;
         color: var(--dark-pink-color);
         margin: 0;
-        
-
     @media screen and (min-width: $tablet) {
             font-size: 48px;
                 line-height: 1.14;
-                margin-bottom: 40px;
-        }
+                margin-bottom: 40px;}
     
         @media screen and (min-width: $desktop) {
             margin-bottom: 60px;
         font-size: 58px;
             line-height: 1.13;
-           
         }
 }
 
@@ -117,7 +108,6 @@ p {
     width: 100%;
 }
 .about-list__item {
-   
         margin-bottom: 40px;
         @media screen and (max-width: $tablet) {
             margin-top: 40px;
@@ -129,35 +119,31 @@ p {
 @media screen and (min-width: $tablet) {
     margin-bottom: 40px;
     }
-
 }
 .about-picture {
     @media screen and (min-width: 480px) and (max-width: 767px){
     display: flex;
     justify-content: center;}
         @media screen and (min-width: $tablet) {
-            margin-right: 32px;
+         margin-right: 32px;
         }
          @media screen and (min-width: $desktop) {
         margin-right: 139px
          }
-
-       &:hover,
+    &:hover,
      &:focus {transform: scale(1.1);}
-
     transition: transform var(--duration)var(--timing-function);
     
 }
 
 .about-pozition{
     @media screen and (min-width: 480px) and (max-width: 767px) {
-            display: flex;
-                flex-direction: column;
-                align-items: center;
+        display: flex;
+        flex-direction: column;
+         align-items: center;
             }
                @media screen and (min-width: 768px)  
-               {display: flex;
- }
+               {display: flex;}
     }
 
  .about-div{
@@ -220,10 +206,8 @@ p {
         width: 322px;
         letter-spacing: 0.04em;
         font-size: 14px;
-        line-height: 1.78;
-            
+        line-height: 1.78;   
         }
-    
         @media screen and (min-width: $desktop) {
             width: 440px;
             letter-spacing: 0.04em;
@@ -234,7 +218,7 @@ p {
 }
 .about-btn {
     
-    margin-top: 20px;
+        margin-top: 20px;
         font-weight: 700;
         font-size: 14px;
         line-height: 18px;
@@ -259,19 +243,6 @@ p {
     --color1: var(--dark-pink-color);
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 .about-backdrop.is-hidden{
     opacity: 0;
     pointer-events: none;
@@ -291,7 +262,6 @@ p {
     left: 0;
 }
 
-
 .about-modal {
     width: 100%;
     position: relative;
@@ -306,19 +276,16 @@ p {
     @media screen and (min-width: 480px) and (max-width:767px) {
             width: 450px;
         }
-                 @media screen and (min-width: $tablet) {
-                     width: 560px;
-                 }
-                @media screen and (min-width: $desktop) {
-                    width: 680px; 
-                      padding: 54px;
-                
-                }
+        @media screen and (min-width: $tablet) {
+          width: 560px; }
+       @media screen and (min-width: $desktop) {
+         width: 680px; 
+         padding: 54px;  }
    @media screen and (max-width: $desktop) {
 .about-item__another {
     display: none;
 }
-   }
+}
 
 }
 .about-modal__text{
@@ -327,12 +294,8 @@ p {
     font-weight: 500;
     font-size: 14px;
     line-height: 194%;
-    /* or 27px */
-
     letter-spacing: 0.04em;
-
     color: #907E82;
-   
 }
 
 .about-btn_anoter {
@@ -343,8 +306,8 @@ p {
     top: 2%;
     right: 2%;
     display: flex;
-        align-items: center;
-        justify-content: center;
+    align-items: center;
+    justify-content: center;
         &:hover,
         &:focus{
             background-color: #D41443;
