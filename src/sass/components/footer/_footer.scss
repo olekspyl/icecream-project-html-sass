@@ -171,7 +171,6 @@
 }
 
 .footer__container {
-   border-bottom: 1px solid var(--review-element-color);
    margin-bottom: 16px;
 
     @media screen and (min-width: $tablet) {
@@ -189,7 +188,12 @@
     }
 }
 
-.footer__copyright {   
+.footer__copyright {
+    border-top: 1px solid var(--review-element-color);
+}
+
+.footer__copyright--text {
+   
     margin-top: 0px;
     margin-bottom: 0px;
 
@@ -204,14 +208,14 @@
     margin-right: auto;
 
         @media screen and (max-width: $tablet) {
-        max-width: 150px;
+        padding-top: 16px;
+        max-width: 140px;
         }
 
         @media screen and (min-width: $tablet) {
         line-height: 1.86;
         letter-spacing: 0.02em;
+        padding-top: 8px;
         }
 }
-
-
 
