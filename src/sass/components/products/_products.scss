@@ -82,6 +82,22 @@
 
 .about__product-item {
   width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--product-pink-color);
+  border-radius: 24px;
+  padding: 160px 40px 40px;
+
+  &:nth-child(2) {
+    background-color: var(--product-creamy-color);
+  }
+
+  &:nth-child(3) {
+    background-color: var(--product-green-color);
+  }
 
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
@@ -92,32 +108,16 @@
   @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 6 * 8px) / 3);
     margin: 8px;
+    padding: 118px 25px 40px;
   }
 
   @media screen and (min-width: 1280px) {
     flex-basis: calc((100% - 6 * 16px) / 3);
     margin: 16px;
-  }
-}
-
-.about__product-list {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--product-pink-color);
-  border-radius: 24px;
-  padding: 160px 40px 40px;
-
-  @media screen and (min-width: 768px) {
-    padding: 118px 25px 40px;
-  }
-
-  @media screen and (min-width: 1280px) {
     padding: 165px 75px 60px 75px;
   }
 }
+
 
 .about__product-name::before {
   position: absolute;
@@ -205,25 +205,6 @@
   }
 }
 
-.about__product-list-cof {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--product-creamy-color);
-  border-radius: 24px;
-  padding: 160px 40px 40px;
-
-  @media screen and (min-width: 768px) {
-    padding: 118px 25px 40px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    padding: 165px 75px 60px 75px;
-  }
-}
-
 .about__product-name-cof::before {
   position: absolute;
   content: '';
@@ -247,25 +228,6 @@
     height: 394px;
     background-image: url(/src/images/desktop/desk-icecoffee-1x.png);
     bottom: 400px;
-  }
-}
-
-.about__product-list-milk {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--product-green-color);
-  border-radius: 24px;
-  padding: 160px 40px 40px;
-
-  @media screen and (min-width: 768px) {
-    padding: 118px 25px 40px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    padding: 165px 75px 60px 75px;
   }
 }
 
