@@ -5,21 +5,11 @@
 
   background-color: var(--howitsmade-bg-color);
 }
-.container--width {
-  @media screen and (min-width: $mobile) {
-    width: 320px;
-  }
-  @media screen and (min-width: 768px) {
-    width: 768px;
-  }
-  @media screen and (min-width: $desktop) {
-    width: 1280px;
-  }
-}
+
 .advantages__list {
   text-align: left;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     margin-left: -60px;
   }
@@ -328,29 +318,3 @@
     grid-row-end: 7;
   }
 }
-
-// .gallery {
-//   padding-bottom: 40px;
-//   background: linear-gradient(
-//     180deg,
-//     var(--howitsmade-bg-color) 29.5%,
-//     var(--primary-white-color) 2%
-//   );
-//   @media screen and (min-width: 768px) {
-//     background: linear-gradient(
-//       180deg,
-//       var(--howitsmade-bg-color) 34.5%,
-//       var(--primary-white-color) 2%
-//     );
-//   }
-//   @media screen and (min-width: $desktop) {
-//     background: linear-gradient(
-//       180deg,
-//       var(--howitsmade-bg-color) 36%,
-//       var(--primary-white-color) 2%
-//     );
-//   }
-// }
-// .gallery__img {
-//   margin: 0 auto;
-// }
