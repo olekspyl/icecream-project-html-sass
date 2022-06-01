@@ -10,7 +10,7 @@ p {
     }
         @media screen and (max-width: $tablet) {
             padding-top: 40px;}
-        @media screen and (min-width: 768px) and (max-width: 1279px) {
+        @media screen and (min-width: 768px) and (max-width: 1279.9px) {
         padding-top: 20px;  }
          @media screen and (min-width: $desktop) {
              padding-top: 60px;
@@ -57,7 +57,7 @@ p {
         
     }
 }
-@media screen and (max-width:767px) {
+@media screen and (max-width:767.9px) {
 @media screen and (min-device-pixel-ratio: 2),
 (min-resolution:192dpi),
 (min-resolution:2dppx) {
@@ -189,7 +189,7 @@ p {
     }
 }
 .about-picture {
-    @media screen and (min-width: 480px) and (max-width: 767px){
+    @media screen and (min-width: 480px) and (max-width: 767.9px){
     display: flex;
     justify-content: center;}
         @media screen and (min-width: $tablet) {
@@ -205,7 +205,7 @@ p {
 }
 
 .about-pozition{
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (min-width: 480px) and (max-width: 767.9px) {
         display: flex;
         flex-direction: column;
          align-items: center;
@@ -219,7 +219,7 @@ p {
         width: 428px;
     padding-top: 72px;
 }
-    @media screen and (min-width: 768px) and (max-width:1279px) 
+    @media screen and (min-width: 768px) and (max-width:1279.9px) 
     {width: 322px;}
         @media screen and (max-width: $tablet) {
             padding-top: 40px;
@@ -238,7 +238,7 @@ p {
         line-height: 1.58;
     color: var(--primary-black-color);
 
-    @media screen and (min-width: 480px) and (max-width:767px) {
+    @media screen and (min-width: 480px) and (max-width:767.9px) {
         width: 210px;}
 
     @media screen and (min-width: $tablet) {
@@ -271,7 +271,7 @@ p {
         color: var(--text-gray-color);
 
     
-@media screen and (min-width: 480px) and (max-width:767px) {
+@media screen and (min-width: 480px) and (max-width:767.9px) {
     width: 210px;
 
 }
@@ -347,7 +347,7 @@ p {
     border-radius: 6px;
     transform: translate(-50%, -50%);
 
-    @media screen and (min-width: 480px) and (max-width:767px) {
+    @media screen and (min-width: 480px) and (max-width:767.9px) {
             width: 450px;
         }
         @media screen and (min-width: $tablet) {
