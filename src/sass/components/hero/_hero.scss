@@ -213,6 +213,7 @@
     position: relative;
     z-index: 1;
     font-family: 'Titan One';
+    display: block;
     font-weight: 400;
     font-size: 28px;
     line-height: 1.14;
@@ -223,9 +224,11 @@
     .hero__item-numbers:nth-child(1) & {
       text-align: left;
     }
+
     .hero__item-numbers:nth-child(2) & {
       text-align: center;
     }
+
     @media screen and (min-width: $desktop) {
       font-size: 46px;
       line-height: 1.15;
