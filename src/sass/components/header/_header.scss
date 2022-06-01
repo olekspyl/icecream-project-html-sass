@@ -111,7 +111,7 @@ header {
 
 .mobile-menu.is-hidden {
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   pointer-events: none;
   visibility: hidden;
   transition: opacity 500ms var(--timing-function),
@@ -146,6 +146,7 @@ header {
 
 .button--tablet {
   display: none;
+  transition: background-color var(--duration) var(--timing-function);
   @media screen and (min-width: $tablet) {
     display: block;
     width: 160px;
@@ -241,7 +242,7 @@ header {
   border-radius: 4px;
   margin: auto 20px 50px auto;
   width: 210px;
-  height: 55px;
+  height: 57px;
 }
 
 .logo-menu {
