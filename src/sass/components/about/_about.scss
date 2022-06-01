@@ -52,7 +52,8 @@ p {
         url(..//images/mobile/milk-mobile/1x/mob-bcg-milk-1x_left.png),
          url(..//images/mobile/milk-mobile/1x/mob-bcg-milk-1x_right.png);
         background-repeat: no-repeat;
-        background-position: left 72%, right 73% ;
+        background-position: 0 74%, right 74%;
+        background-size: 47px, 71px;
         
     }
 }
@@ -64,9 +65,9 @@ p {
         background-image: 
         url(..//images/mobile/milk-mobile/2x/mob-bcg-milk-2x_left.png),
         url(..//images/mobile/milk-mobile/2x/mob-bcg-milk-2x_right.png);
-                background-position: 0 82%, right 72%;
+                background-position: 0 74%, right 74%;
                 background-repeat: no-repeat;
-                background-size: 24%;
+                background-size: 47px, 71px;
     }
 }}
 
@@ -78,10 +79,9 @@ p {
     background-image: 
     url(..//images/desktop/milk-desktop/1x/desk-bcg-milk-1x_left.png),
      url(..//images/desktop/milk-desktop/1x/desk-bcg-milk-1x_right.png);
+        background-position: 0 94%, right 89%;
         background-repeat: no-repeat;
-        background-position: left 72%, right 73%;
-        // background-size: contain;
-
+        background-size: 180px, 305px;
     }
 }
 @media screen and (min-width: $desktop) {
@@ -94,8 +94,9 @@ p {
             background-image: 
             url(..//images/desktop/milk-desktop/2x/desk-bcg-milk-2x_left.png),
             url(..//images/desktop/milk-desktop/2x/desk-bcg-milk-2x_right.png);
-            background-position: left -127%, right 90%;
-            background-size: 23%;
+            background-position: 0 94%, right 89%;
+            background-repeat: no-repeat;
+            background-size: 180px, 305px;
            
         }
     }
