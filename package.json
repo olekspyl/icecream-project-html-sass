@@ -1,21 +1,21 @@
 {
-  "name": "parcel-project-template",
+  "name": "icecream-project-html-sass",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://olekspyl.github.io/goit-team7-project",
+  "homepage": "https://olekspyl.github.io/icecream-project-html-sass",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-team7-project/"
+    "build": "parcel build src/*.html --public-url /icecream-project-html-sass/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/olekspyl/goit-team7-project.git"
+    "url": "git+https://github.com/olekspyl/icecream-project-html-sass.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Oleksandra Pylypchuk <lemocream@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/olekspyl/goit-team7-project/issues"
+    "url": "https://github.com/olekspyl/icecream-project-html-sass/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
