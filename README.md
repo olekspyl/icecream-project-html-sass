@@ -5,8 +5,7 @@ useful and precise site.
 
 ## Why site is useful
 
-1. The design of the site meets the following needs of the user:
-
+The design of the site meets the following needs of the user:
 - viewing the company's assortment in a convenient format;
 - display of the production process, which guarantees the quality and
   transparency of production;
